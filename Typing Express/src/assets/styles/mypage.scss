@@ -1,0 +1,449 @@
+@mixin pc {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+//スコア表示遅延用
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mypage {
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+  }
+  &__card {
+    width: 100%;
+    @include pc {
+      max-width: 880px;
+      padding: 0 70px;
+      padding-top: 16px;
+      margin: 161px 20px 136px;
+    }
+    @include sp {
+      margin: 89px 20px 80px;
+      max-width: 350px;
+      padding: 0 20px;
+      padding-top: 12px;
+    }
+  }
+
+  &__score-bar-container {
+    width: 100%;
+    height: 31px;
+    background-color: #e0e0e0; // バーの空いている部分の背景色
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    @include pc {
+      margin-top: 22px;
+      margin-left: 25px;
+      max-width: 690px;
+    }
+    @include sp {
+      margin-top: 24px;
+      max-width: 310px;
+    }
+  }
+  &__score-bar-fill {
+    height: 100%;
+    background-color: #00ff09;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width 0.7s ease-in-out;
+    min-width: 0%;
+  }
+  &__score-value {
+    position: relative;
+    top: -2px;
+    z-index: 1;
+    color: #333;
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    opacity: 0;
+
+    animation: fadeInText 0.3s forwards;
+    animation-delay: 0.9s;
+  }
+  &__score-date {
+    position: absolute;
+    color: #303030;
+    white-space: nowrap;
+    z-index: 1;
+    font-weight: 400;
+
+    @include pc {
+      margin-left: 25px;
+      font-size: 16px;
+      bottom: -17px;
+      right: 0;
+    }
+    @include sp {
+      font-size: 12px;
+      bottom: -25px;
+      right: 0;
+    }
+  }
+  &__topic {
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    @include pc {
+      font-size: 20px;
+    }
+    @include sp {
+      font-size: 16px;
+    }
+  }
+  &__field--user-info {
+    @include pc {
+      margin-top: 38px;
+      height: 77px;
+    }
+    @include sp {
+      margin-top: 30px;
+      height: 116px;
+    }
+  }
+  &__wrap--name {
+    letter-spacing: 0.05em;
+    @include pc {
+      display: flex;
+      font-size: 16px;
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+    @include sp {
+      font-size: 12px;
+      height: 34px;
+      margin-top: 13px;
+    }
+  }
+  &__wrap--email {
+    letter-spacing: 0.05em;
+    @include pc {
+      display: flex;
+      font-size: 16px;
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+    @include sp {
+      margin-top: 14px;
+      font-size: 12px;
+    }
+  }
+  &__wrap--text {
+    position: relative;
+    @include pc {
+      width: 149px;
+    }
+    @include sp {
+      width: fit-content;
+      margin-left: 25px;
+    }
+    &::after {
+      content: ':';
+      position: absolute;
+      @include pc {
+        right: 0;
+      }
+      @include sp {
+        right: -8px;
+        bottom: 1px;
+      }
+    }
+  }
+  &__wrap--accout {
+    letter-spacing: 0.05em;
+    @include pc {
+      margin-left: 25px;
+    }
+    @include sp {
+      margin-top: 9px;
+      margin-left: 57px;
+    }
+  }
+  &__field--score {
+    position: relative;
+    height: 139px;
+    @include pc {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 715px;
+    }
+    @include sp {
+      margin-top: 12px;
+    }
+  }
+  &__field--roulette {
+    @include pc {
+      height: 169px;
+      margin: 30px 0;
+    }
+    @include sp {
+      max-width: 310px;
+      height: 163px;
+      margin-top: 12px;
+      margin-bottom: 64px;
+      position: relative;
+    }
+  }
+  &__button--score-list {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+
+    @include pc {
+      bottom: -60px;
+      right: 20px;
+    }
+    @include sp {
+      bottom: -52px;
+      right: 18px;
+    }
+  }
+  &__button--title {
+    letter-spacing: 0.04em;
+    position: relative;
+
+    @include pc {
+      font-size: 16px;
+    }
+    @include sp {
+      font-size: 12px;
+    }
+    &--score {
+      &::after {
+        content: '';
+        border-bottom: 1px solid #000;
+        border-right: 2px solid #000;
+        transform: skew(60deg);
+        position: absolute;
+        transition: 0.3s;
+
+        @include pc {
+          top: 16px;
+          right: -11px;
+          width: 118.5px;
+          height: 10px;
+        }
+        @include sp {
+          top: 11px;
+          right: -10px;
+          width: 91px;
+          height: 7px;
+        }
+      }
+      &:hover {
+        &::after {
+          @include pc {
+            right: -28px;
+            width: 135px;
+          }
+          @include sp {
+            right: -22px;
+            width: 103px;
+          }
+        }
+      }
+    }
+
+    &--roulette {
+      &::after {
+        content: '';
+        border-bottom: 1px solid #000;
+        border-right: 2px solid #000;
+        transform: skew(60deg);
+        position: absolute;
+        transition: 0.3s;
+
+        @include pc {
+          top: 16px;
+          right: -11px;
+          width: 154.5px;
+          height: 10px;
+        }
+        @include sp {
+          top: 11px;
+          right: -10px;
+          width: 116px;
+          height: 7px;
+        }
+      }
+      &:hover {
+        &::after {
+          @include pc {
+            right: -28px;
+            width: 171px;
+          }
+          @include sp {
+            right: -22px;
+            width: 127px;
+          }
+        }
+      }
+    }
+  }
+  &__table--roulette-wrapper {
+    @include pc {
+      width: 690px;
+      margin-top: 6px;
+      margin-left: 25px;
+      position: relative;
+    }
+    @include sp {
+      // max-width: 312px;
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 15px;
+    }
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+      }
+    }
+  }
+  &__table--roulette {
+    border-collapse: collapse;
+
+    text-align: center;
+    position: relative;
+    table-layout: fixed;
+    @include sp {
+      // overflow-x: hidden;
+      width: max-content;
+      min-width: 100%;
+    }
+  }
+  &__thead {
+    border: 1px solid #000;
+    background: #bbc8ff;
+  }
+  &__th--title {
+    border: 1px solid #303030;
+    text-align: center;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    @include pc {
+      width: 342.5px;
+      height: 24px;
+    }
+    @include sp {
+      width: 250px;
+      height: 24px;
+      white-space: nowrap;
+    }
+  }
+  &__th--data {
+    border: 1px solid #303030;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    @include pc {
+      width: 347.5px;
+      height: 24px;
+    }
+    @include sp {
+      width: 250px;
+      height: 24px;
+      white-space: nowrap;
+    }
+  }
+  &__td--title {
+    border: 1px solid #303030;
+    height: 24px;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+  &__td--data {
+    border: 1px solid #303030;
+    height: 24px;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+  &__button--roulette-list {
+    display: inline;
+    cursor: pointer;
+    position: absolute;
+
+    @include pc {
+      display: block;
+      bottom: -40px;
+      width: 152px;
+      right: 0px;
+    }
+    @include sp {
+      bottom: 4px;
+      right: 18px;
+    }
+  }
+  &__no-data {
+    padding: 20px;
+    border: 1px solid #000;
+  }
+  &__button-area {
+    display: flex;
+    justify-content: center;
+    @include pc {
+      margin: 0 auto 90px auto;
+    }
+    @include sp {
+      margin: 0 auto 106px auto;
+    }
+  }
+  &__button-try {
+    border: 1px solid #303030;
+    cursor: pointer;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    height: 88px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 100%;
+    @include pc {
+      width: 450px;
+    }
+    @include sp {
+      width: 310px;
+    }
+  }
+}

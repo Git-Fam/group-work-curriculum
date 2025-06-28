@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Sans+JP:wght@100..900&display=swap');
+$button-font: 'Noto Sans JP';
+
+@mixin pc {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.button-page-jump {
+  font-family: $button-font;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 black;
+  transition: transform 0.3s ease;
+  @include pc {
+    width: 111px;
+    height: 32px;
+    font-size: 20px;
+  }
+  @include sp {
+    width: 100px;
+    height: 32px;
+  }
+}
+
+.button-page-jump:hover {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.button-gradient {
+  background: linear-gradient(to bottom, #e1fbe5, #1eb535);
+  transition: background 0.5s ease;
+  &:hover {
+    background: linear-gradient(to bottom, #1eb535, #e1fbe5);
+  }
+}
+
+.button-login {
+  letter-spacing: 0.05em;
+  background-color: rgba(98, 255, 0, 1);
+}
+.button-logout {
+  letter-spacing: 0.05em;
+  background-color: #cacaca;
+  @include pc {
+    position: absolute;
+    right: 100px;
+  }
+}
+.button-signup {
+  letter-spacing: 0.05em;
+  background-color: rgba(238, 255, 0, 1);
+  font-family: Noto Sans JP;
+  line-height: 100%;
+  font-weight: 400;
+  @include pc {
+    font-size: 20px;
+  }
+  @include sp {
+    font-size: 18px;
+  }
+}

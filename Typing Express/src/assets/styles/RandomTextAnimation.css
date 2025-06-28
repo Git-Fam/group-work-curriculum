@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap');
+
+.animation-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+
+.character {
+  position: absolute;
+  font-size: 40px;
+  font-family: Unkempt;
+  transition: transform 5s ease-in-out, top 5s ease-in-out, opacity 5s linear;
+}
