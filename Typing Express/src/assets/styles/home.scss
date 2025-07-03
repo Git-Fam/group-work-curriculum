@@ -1,0 +1,68 @@
+@mixin pc {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.home {
+  &-card {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include pc {
+      width: 683px;
+    }
+    @include sp {
+      width: 281px;
+    }
+  }
+
+  &-app-name {
+    letter-spacing: 0.05em;
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+      font-size: 90px;
+      white-space: nowrap;
+      text-align: justify;
+    }
+    @include sp {
+      font-size: 70px;
+      text-align: center;
+    }
+  }
+
+  &-button-area {
+    text-align: center;
+    margin: 0 auto;
+
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 65px;
+      width: 381px;
+    }
+
+    @include sp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+      gap: 15px;
+    }
+  }
+
+  &-button-Signup {
+    @include sp {
+      margin-top: 15px;
+    }
+  }
+}

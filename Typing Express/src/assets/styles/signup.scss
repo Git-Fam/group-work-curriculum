@@ -1,0 +1,100 @@
+@mixin pc {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.signup {
+  &__header {
+    @include pc {
+      justify-content: center;
+    }
+    @include sp {
+      justify-content: end;
+    }
+  }
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+  }
+  &__card {
+    @include pc {
+      width: 450px;
+      height: 463px;
+      padding-top: 16px;
+      margin-top: 159px;
+      margin-bottom: 78px;
+    }
+    @include sp {
+      max-width: 350px;
+      width: 100%;
+      height: 360px;
+      padding-top: 12px;
+      margin: 170px 0 170px;
+    }
+  }
+  &__button-login {
+    position: absolute;
+    @include pc {
+      left: 100px;
+    }
+    @include sp {
+      left: 20px;
+    }
+  }
+  &__page-title {
+    @include pc {
+      margin-bottom: 38px;
+    }
+    @include sp {
+      margin-bottom: 29px;
+    }
+  }
+
+  &-form {
+    &__field--email {
+      @include pc {
+        margin-top: 24px;
+      }
+      @include sp {
+        margin-top: 18px;
+      }
+    }
+
+    &__error-space--email {
+      @include pc {
+        min-height: 24px;
+      }
+      @include sp {
+        min-height: 18px;
+      }
+    }
+
+    &__error-space--password {
+      @include pc {
+        min-height: 35px;
+      }
+      @include sp {
+        min-height: 27px;
+      }
+    }
+    &__button {
+      @include pc {
+        height: 36px;
+      }
+      @include sp {
+        height: 28px;
+      }
+    }
+  }
+}

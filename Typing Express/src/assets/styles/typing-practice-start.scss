@@ -1,0 +1,54 @@
+@mixin pc {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.start-screen {
+  &__container-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  &__container {
+    position: relative;
+    margin: 0 auto;
+  }
+  &__start-button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px #000000;
+    font-size: 30px;
+    letter-spacing: 0.04em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+
+    @include pc {
+      width: 463px;
+      height: 134px;
+    }
+    @include sp {
+      width: 350px;
+      height: 134px;
+    }
+    &:hover {
+      box-shadow: none;
+      top: 51%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
