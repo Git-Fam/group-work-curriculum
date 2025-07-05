@@ -5,15 +5,13 @@ import '../assets/styles/login.scss';
 import '../assets/styles/button.scss';
 import Layout from '../components/Layout';
 
-import { useAuth } from '../assets/contexts/AuthContext';
-//仮のパスです。useAuthフックにて、Firebase認証ロジックをカプセル化している想定です。
+
 
 function Login() {
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  const { login } = useAuth(); //useAuthから、ログイン処理を実行する'login'関数を取得
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -24,38 +22,10 @@ function Login() {
       return;
     }
 
-    try {
-      console.log('ログイン処理を試行中:', { username });
-
-      const userData = await login(username, password);
-
-      console.log('ログイン成功', userData);
+    // ログイン処理を実行、ユーザーデータは存在しないためダミーを渡す
       console.log('マイページへ移動');
-      navigate('/mypage', {
-        state: {
-          uid: userData.uid,
-          email: userData.email,
-          username: userData.username,
-        },
-      });
-    } catch (err) {
-      console.error('ログインエラー:', err);
-      // useAuthフックから返されるエラーメッセージの表示
-      switch (err.message) {
-        case 'auth/user-disabled':
-        case 'auth/user-not-found':
-        case 'auth/wrong-password':
-        case 'auth/invalid-credential':
-          setError('ユーザー名またはパスワードが正しくありません。');
-          break;
-        case 'auth/invalid-email':
-          setError('登録されているメールアドレスが無効です。');
-          break;
-        default:
-          setError(err.message || 'ログイン中に予期せぬエラーが発生しました。'); //想定外のエラーはそのまま表示
-      }
-    }
-  };
+      navigate('/mypage'); // ログイン成功後、マイページへ遷移
+    };
 
   return (
     <Layout>

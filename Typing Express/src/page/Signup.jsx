@@ -31,58 +31,36 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    console.log('フォーム送信');
-
-    if (isSubmitting) return;
-    setIsSubmitting(true);
     setError('');
     setEmailError('');
     setPasswordError('');
     setSuccessMessage('');
 
+    //未入力のバリデーション
+    if (!username.trim()) {
+      setError('ユーザー名を入力してください。');
+      return;
+    }
+    if (!email.trim()) {
+      setEmailError('メールアドレスを入力してください。');
+      return;
+    }
+    if (!password.trim()) {
+      setPasswordError('パスワードを入力してください。');
+      return;
+    }
     if (password.length < 6) {
-      setError('パスワードは6文字以上で入力してください。');
-      setIsSubmitting(false);
+      setPasswordError('パスワードは6文字以上で入力してください。');
       return;
     }
 
-    // テスト用　//
+    setIsSubmitting(true);
 
-    try {
-      console.log('テスト用ユーザー登録処理開始'); // テスト用の既存ユーザー確認（localStorageに保存されたemailと比較）
-
-      const existingUser = JSON.parse(localStorage.getItem('authUser'));
-      if (existingUser && existingUser.email === email) {
-        setEmailError('このメールアドレスはすでに使用されています。');
-        setIsSubmitting(false);
-        return;
-      } // ダミーユーザー作成
-
-      const dummyUser = {
-        uid: 'test-uid-' + Math.random().toString(36).substring(7),
-        email,
-        username,
-        createdAt: new Date().toISOString(),
-      }; // localStorageに保存（ログイン状態を模倣）
-
-      localStorage.setItem('authUser', JSON.stringify(dummyUser));
-
-      // 登録後にログイン処理
-      await login(username, password);
-
-      setSuccessMessage('登録が完了しました！ログインページへ移動します。');
-      alert('登録が完了しました！ログインページへ移動します。');
-
-      setTimeout(() => navigate('/login'), 2000);
-    } catch (err) {
-      console.error('Signup error:', err);
-      setError('アカウント作成中にエラーが発生しました。');
-    } finally {
-      setIsSubmitting(false);
-    }
+    alert('サインアップ処理を実行（ダミー）');
+    // ダミーのサインアップ処理
+    navigate('/login');
   };
 
-  // テスト用 //
 
   return (
     <Layout>
