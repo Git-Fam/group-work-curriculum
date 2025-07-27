@@ -1,0 +1,104 @@
+import React from 'react';
+import {Link} from "react-router-dom";
+import Navbar from "./Navbar";
+import {useEffect} from 'react';
+import "./ScoreList.css";
+
+const ScoreList = () => {
+    const maxScore = 80 + "%";
+    const worstScoreData = 20 + "%";
+    const averageScoreData = 80 + "%";
+    const maxScoreDate = "2025/01/01";
+
+    useEffect(() => {
+        var className1 = document.getElementsByClassName("myScore");
+        for (var i = 0; i < className1.length; i++){
+            className1[i].style.width = maxScore;
+        }
+        const element1 = document.getElementById("worstScore");
+        element1.style.width = worstScoreData;
+
+        const element2 = document.getElementById("averageScore");
+        element2.style.width = averageScoreData;
+    })
+
+  return (
+    <div className='body'>
+      <div className='baseColor'>
+        <Navbar />
+        <div className='scoreBody'>
+          <div className='baseBG onUserBG'>
+            <h2>Score</h2>
+            <div>
+                <div className='form'>
+                    <div className='scoreRanking'>
+                    <p className='subTitle'>スコア</p>
+                    <div className='scoreGroup inContents'>
+                        <div className='scoreGauge'>
+                        <p className='scoreNumbar'>{maxScore}</p>
+                        <div className='myScore'></div>
+                        </div>
+                        <div className='date'>{maxScoreDate}</div>
+                    </div>
+                    <div className='scoreGroup inContents'>
+                        <div className='scoreGauge'>
+                        <p className='scoreNumbar'>{maxScore}</p>
+                        <div className='myScore'></div>
+                        </div>
+                        <div className='date'>{maxScoreDate}</div>
+                    </div>
+                    <div className='scoreGroup inContents'>
+                        <div className='scoreGauge'>
+                        <p className='scoreNumbar'>{maxScore}</p>
+                        <div className='myScore'></div>
+                        </div>
+                        <div className='date'>{maxScoreDate}</div>
+                    </div>
+                    <div className='scoreGroup inContents'>
+                        <div className='scoreGauge'>
+                        <p className='scoreNumbar'>{maxScore}</p>
+                        <div className='myScore'></div>
+                        </div>
+                        <div className='date'>{maxScoreDate}</div>
+                    </div>
+                    <div className='scoreGroup inContents'>
+                        <div className='scoreGauge'>
+                        <p className='scoreNumbar'>{maxScore}</p>
+                        <div className='myScore'></div>
+                        </div>
+                        <div className='date'>{maxScoreDate}</div>
+                    </div>
+                </div>
+            
+                <div className='average'>
+                    <p className='subTitle'>正解率</p>
+                    <div className='scoreGroup inContents'>
+                        <div className='scoreGauge'>
+                        <p className='scoreNumbar'>{averageScoreData}</p>
+                        <div id='averageScore'></div>
+                        </div>
+                        <div className='date'>{maxScoreDate}</div>
+                    </div>            
+                </div>
+
+                
+                <div className='worst'>
+                    <p className='subTitle'>不正解率</p>
+                    <div className='scoreGroup inContents'>
+                        <div className='scoreGauge'>
+                        <p className='scoreNumbar'>{worstScoreData}</p>
+                        <div id='worstScore'></div>
+                        </div>
+                        <div className='date'>{maxScoreDate}</div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ScoreList;

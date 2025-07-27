@@ -1,0 +1,30 @@
+.typingBody{
+    padding: 67px 0 81px;
+}
+.typingArea{
+    margin: auto;
+    text-align: center;
+    width: calc((100vw - 1280px) / 1.7 + 880px);
+    padding: 20px 0 183px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.questionNumber{
+    font-size: 30px;
+}
+.startButton{
+    width: calc((100vw - 1280px) / 4 + 463px);
+    padding: 52px 0;
+    margin-top: 133px;
+}
+
+@media screen and (max-width: 390px) {
+    .typingArea{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px 20px 183px;
+    }
+    .startButton{
+        width: 350px;
+        margin-top: 115px;
+    }
+}

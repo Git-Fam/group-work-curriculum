@@ -1,0 +1,22 @@
+.selectBody{
+    padding: 245px 0 297px;
+}
+
+.selectButton{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.selectButton button{
+    width: 343px;
+    padding: 38px 0;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 390px) {
+    .selectButton{
+        flex-direction: column;
+    }
+}

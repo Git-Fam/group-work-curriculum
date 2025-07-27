@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+
+
+/* 全体部分 */
+.baseColor{
+  background: linear-gradient(180deg, rgba(30, 181, 53, 0.5), rgba(225, 251, 229, 0.5));
+}
+
+.body{
+  background-image: url(./components/images/backgraund_img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom 50% left;
+  font-family: "Noto Sans JP";
+}
+.baseColor{
+  backdrop-filter: blur(10px);
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  display: inline-block;
+}
+
+/* navバー部分 */
+nav{
+    background-color: rgb(255, 255, 255, 0.1);
+    display: flex;
+    padding: 9px calc((100 / 1280) * 100vw);
+    align-items: center;
+    position: relative;
+}
+
+h1, .title, h2, .selectButton, .startButton{
+    font-family: "Agbalumo", system-ui;
+    color: rgba(48, 48, 48, 1);
+    letter-spacing: 0.1em;
+}
+
+h1, .title{
+    text-shadow: 2px 1px #fff;
+}
+
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-size: calc((100vw - 1280px) / 350 + 20px);
+}
+
+.loginButton, .siginButton, .logoutButton{
+    font-size: calc((100vw - 1280px) / 200 + 20px);
+}
+
+.loginButton, .siginButton, .logoutButton{
+    height: 35px;
+    width: calc((100vw - 1280px) / 30 + 111px);
+    border: none;
+    box-shadow: 0 3px #000;
+}
+
+.loginButton:hover, .siginButton:hover, .logoutButton:hover{
+    box-shadow: none;
+}
+
+.loginButton{
+    background-color: #62FF00;
+}
+
+.siginButton{
+    background-color: #EEFF00;
+}
+
+.logoutButton{
+    background-color: rgba(202, 202, 202);
+}
+.logoutButton{
+    margin-left: auto;
+}
+
+/* コンテンツ部分 */
+.baseBG{
+  box-sizing: border-box;
+  padding: 16px calc((40 / 1280) * 100vw) 90px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  filter: drop-shadow(3px 6px 10px #000); 
+}
+
+h2{
+  font-size: 36px;
+  margin-top: 0;
+}
+
+button, input, .loginButton, .siginButton, .logoutButton{
+  border-radius: 5px;
+}
+
+.formButton{
+  border: solid 1px #000;
+  background: linear-gradient(0deg, rgba(30, 181, 53, 1), rgba(225, 251, 229, 1));
+}
+
+.formButton:hover{
+  background: linear-gradient(180deg, rgba(30, 181, 53, 1), rgba(225, 251, 229, 1));
+}
+
+@media screen and (max-width: 390px) {
+    /* NAVバー */
+    nav{
+      justify-content: space-between;
+      justify-content: center;
+      padding: 12px calc((20 / 390) * 100vw);
+    }
+    nav, .title{
+      position: static;
+    }
+    .title{
+      font-size: calc((100vw - 390px) / 160 + 20px);
+      top: auto;
+      left: auto;
+      transform: none;
+      line-height: 1.5;
+    }
+
+    .baseBG{
+      box-sizing: border-box;
+      padding: 12px calc((31 / 390) * 100vw) 70px;
+      margin: auto;
+    }
+    h2{
+      font-size: 28px;
+    }
+    .loginButton, .siginButton, .logoutButton{
+      height: 29px;
+      width: calc((100 / 390) * 100vw);
+      border: none;
+      box-shadow: 0 3px #000;
+    }
+}

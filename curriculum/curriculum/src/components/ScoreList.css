@@ -1,0 +1,53 @@
+/* 全体 */
+.scoreBody{
+    padding: 113px 0 134px;
+}
+.scoreBody .onUserBG{
+    padding: 16px calc((70 / 1280) * 100vw) 132px;
+}
+.myScore, #worstScore, #averageScore{
+    background-color: rgba(0, 255, 9, 1);
+    height: 31px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    z-index: 10;
+    width: auto;
+}
+.average, .worst{
+    margin-top: 30px;
+}
+
+
+/* スコア */
+.myScore{
+    background-color: rgba(0, 255, 9, 1);
+}
+.scoreRanking{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 正解率 */
+#averageScore{
+    background-color: rgba(0, 242, 255, 1);
+}
+
+/* 不正解率 */
+#worstScore{
+    background-color: rgba(255, 83, 83, 1);
+}
+
+
+@media screen and (max-width: 390px) {
+    .scoreRanking{
+        gap: 15px;
+    }
+    .average, .worst{
+        margin-top: 20px;
+    }
+}

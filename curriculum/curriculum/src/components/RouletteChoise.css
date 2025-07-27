@@ -1,0 +1,35 @@
+.choiseBody{
+    padding: 263px 0 182px;
+}
+.choiseButton{
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    align-items: center;
+}
+.selectTitle{
+    display: flex;
+}
+.titleChoise{
+    font-size: 25px;
+    padding: 26px 0;
+    width: 450px;
+    justify-content: center;
+    border: 5px #000 solid;
+}
+.startButton{
+    font-size: 30px;
+    width: 343px;
+    padding: 10px 0;
+    box-shadow: 0 4px #000;
+    border-radius: 10px;
+}
+.startButton:hover{
+    box-shadow: none;
+}
+.choise{
+    padding: 0;
+    font-size: 45px;
+    aspect-ratio: 1;
+    line-height: 91px;
+}

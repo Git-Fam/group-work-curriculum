@@ -1,0 +1,106 @@
+/* トップ画面 */
+.topImg{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.topTitle{
+    text-align: center;
+    font-size: calc((100vw - 1280px) / 20 + 90px);
+    margin-top: 0;
+    text-shadow: 7px 0 #fff;
+}
+
+h1{
+    text-shadow: 7px 0 #fff;
+}
+
+.topButtonGroup{
+    margin-top: 75px;
+    display: flex;
+    gap: calc((159 / 1280) * 100vw);
+    justify-content: center;
+}
+
+br{
+    display: none;
+}
+
+/* 新規登録画面 */
+.siginBody{
+    padding: 106px 0 78px;
+}
+
+/* ログイン画面 */
+.loginBody{
+    padding: 106px 0 158px;
+}
+nav .siginButton{
+    margin-left: auto;
+}
+
+/* フォーム部分共通 */
+.offUserBG{
+    width: calc((100vw - 1280px) / 10 + 450px);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: left;
+}
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    height: 35px;
+    padding: 0 10px;
+}
+
+
+.loginBody .formButton, .siginBody .formButton{
+    width: 100%;
+    margin-top: 35px;
+    font-size: 16px;
+    height: 35px;
+}
+
+@media screen and (max-width: 390px) {
+    /* トップ画面 */
+    br{
+        display: block;
+    }
+    .topTitle{
+        text-shadow: 7px 2px #fff;
+        font-size: 70px;
+        line-height: 1em;
+    }
+    .topButtonGroup{
+        flex-direction: column;  
+        align-items: center; 
+        gap: calc((15 / 390) * 100vw);     
+        margin-top: 63px;
+    }
+
+    .offUserBG{
+        width: calc((350 / 390) * 100vw);
+    }
+    .form{
+        gap: 19px;
+    }
+    .loginBody .formButton, .siginBody .formButton{
+        width: 100%;
+        margin-top: 27px;
+    }
+    .offUserBG label{
+        font-size: 12px;
+    }
+    input{
+        height: 28px;
+    }
+}

@@ -1,0 +1,80 @@
+/* 全体 */
+.RouletteFormBody{
+    padding: 109px 0 136px;
+}
+.RouletteFormBody .onUserBG{
+    padding: 16px calc((80 / 1280) * 100vw) 130px;
+}
+
+/* タイトル部分 */
+.rouletteTitle{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 29px;
+}
+
+/* ルーレット作成部分 */
+.rouletteQuestion{
+    border: #000 1px solid;
+    margin-bottom: 29px;
+    padding: 15px 15px 21px 15px;
+}
+.rouletteQuestionFlex{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 34px;
+}
+
+.madeRoulette label, .rouletteQuestion label{
+    display: block;
+    text-align: left;
+}
+.question{
+    display: flex;
+    gap: 11px;
+}
+.question input{
+    width: 100%;
+}
+.addQuestion{
+    background-color: #fff;
+    width: 100%;
+}
+.delete{
+    width: 79px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.addQuestion{
+    padding: 13px;
+}
+.rouletteQuestion button{
+    font-size: 10px;
+}
+
+/* 登録ボタン */
+.upQuestion{
+    width: 100%;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 390px) {
+    .rouletteQuestionFlex{
+        gap: 10px;
+    }
+    .RouletteFormBody{
+        padding: 35px 0 90px;
+    }
+    .question{
+        flex-direction: column;
+    }
+    .question input{
+        width: auto;
+    }
+    .delete{
+        margin-left: auto;
+    }
+}
