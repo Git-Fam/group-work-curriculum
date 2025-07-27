@@ -1,0 +1,54 @@
+.sidebar {
+  width: 250px;
+  background-color: rgb(5, 98, 5);
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.logo {
+  width: 120px;
+  padding-top: 100px;
+}
+
+.text-title {
+  font-size: 16px;
+  color: #ffffff;
+  padding-bottom: 40px;
+  text-align: left;
+}
+
+.text-small {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 100px;
+}
+
+nav a {
+  display: block;
+  width: 200px;
+  padding: 12px 0;
+  text-align: center;
+  background-color: rgb(29, 114, 29);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 9999px;
+}
