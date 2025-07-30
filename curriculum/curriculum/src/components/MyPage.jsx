@@ -15,6 +15,7 @@ const MyPage = () => {
     element.style.width = maxScore;
   })
 
+  
   return (
     <div className='body'>
       <div className='baseColor'>

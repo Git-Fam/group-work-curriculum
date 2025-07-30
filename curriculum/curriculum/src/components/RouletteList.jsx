@@ -80,4 +80,4 @@ const RouletteList = () => {
   )
 }
 
-export default RouletteList
+export default RouletteList;

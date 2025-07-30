@@ -18,4 +18,4 @@ const TypingPravtice = () => {
   )
 } 
 
-export default TypingPravtice
+export default TypingPravtice;

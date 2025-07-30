@@ -27,4 +27,4 @@ const RouletteChoise = () => {
   )
 }
 
-export default RouletteChoise
+export default RouletteChoise;

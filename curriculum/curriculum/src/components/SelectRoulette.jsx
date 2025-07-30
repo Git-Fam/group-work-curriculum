@@ -23,4 +23,4 @@ const SelectRoulette = () => {
   )
 }
 
-export default SelectRoulette
+export default SelectRoulette;
