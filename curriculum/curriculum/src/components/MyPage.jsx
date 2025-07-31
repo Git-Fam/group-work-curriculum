@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import "./MyPage.css";
+import "./css/MyPage.css";
 import {auth} from "../firebase";
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";

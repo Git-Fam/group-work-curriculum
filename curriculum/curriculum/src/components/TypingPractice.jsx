@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "./Navbar";
-import "./TypingPractice.css";
+import "./css/TypingPractice.css";
 
 const TypingPravtice = () => {
   return (

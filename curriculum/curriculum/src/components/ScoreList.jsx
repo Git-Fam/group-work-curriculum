@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
 import {useEffect} from 'react';
-import "./ScoreList.css";
+import "./css/ScoreList.css";
 
 const ScoreList = () => {
     const maxScore = 80 + "%";

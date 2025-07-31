@@ -1,9 +1,6 @@
-import {useEffect} from 'react';
-import {signInWithPopup} from 'firebase/auth';
-import {auth, provider} from "../firebase";
 import {useState} from "react";
 import {Link, useNavigate } from 'react-router-dom';
-import "./Logout.css";
+import "./css/Logout.css";
 
 
 const Login = () => {
@@ -28,7 +25,7 @@ const Login = () => {
           </button>
         </nav>
 
-        <div className='loginBody'>
+        <div className='pagePosition'>
           <div className='baseBG offUserBG'>
             <h2>Login</h2>
             <div className='form'>

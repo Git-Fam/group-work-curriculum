@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {Link} from "react-router-dom";
-import "./Logout.css";
+import "./css/Logout.css";
 import { useNavigate } from 'react-router-dom';
 
 const Top = () => {
@@ -10,7 +10,7 @@ const Top = () => {
   return (
     <div className='body'>
       <div className='topBody'>
-        <div className='baseColor topImg'>
+        <div className='baseColor pagePosition'>
           <div className='topItem'>
             <h1 className='topTitle'>Typing <br />Express</h1>
             <div className='topButtonGroup'>

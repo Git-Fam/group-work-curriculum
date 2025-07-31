@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
-import "./RouletteChoise.css"
+import "./css/RouletteChoise.css"
 
 const RouletteChoise = () => {
   return (

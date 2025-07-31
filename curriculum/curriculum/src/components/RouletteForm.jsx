@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {useState} from "react";
-import "./RouletteForm.css";
+import "./css/RouletteForm.css";
 import {addDoc, collection} from 'firebase/firestore';
 import {auth,db} from "../firebase";
 import Navbar from "./Navbar";
