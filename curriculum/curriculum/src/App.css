@@ -113,6 +113,7 @@ button, input, .loginButton, .siginButton, .logoutButton{
 
 .formButton:hover{
   background: linear-gradient(180deg, rgba(30, 181, 53, 1), rgba(225, 251, 229, 1));
+  transition: 1s;
 }
 
 @media screen and (max-width: 390px) {

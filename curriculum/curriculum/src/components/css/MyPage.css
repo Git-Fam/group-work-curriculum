@@ -23,10 +23,24 @@
     font-size: 20px;
 }
 .linkPage{
+    margin-top: 30px;
+    margin-right: 20px;
     text-align: end;
 }
 .linkPage a{
     width: auto;
+}
+.lineArrow {
+  width: 115%;
+  height: 8px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: skew(55deg);
+  margin: -10px 0 0 -8px;
+}
+.linkPage:hover .lineArrow{
+    width: 140%;
+    transition: 0.5s;
 }
 
 
@@ -54,7 +68,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
     z-index: 20;
     font-weight: bold;
     line-height: 50px;

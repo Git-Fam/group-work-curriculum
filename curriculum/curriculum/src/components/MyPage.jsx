@@ -7,7 +7,9 @@ import Navbar from "./Navbar";
 
 const MyPage = () => {
 
-  const maxScore = 80 + "%";
+  const myScore = 80;
+
+  const maxScore = myScore + "%";
   const maxScoreDate = "2025/01/01";
 
   useEffect(() => {
@@ -49,7 +51,7 @@ const MyPage = () => {
                   </div>
                   <div className='date'>{maxScoreDate}</div>
                   <div className='linkPage'>
-                    <Link to={"/scorelist"}>スコア一覧へ</Link>
+                    <Link to={"/scorelist"}>スコア一覧へ<div class="lineArrow"></div></Link>
                   </div>
                 </div>
               </div>
@@ -78,7 +80,7 @@ const MyPage = () => {
                   </div>
 
                   <div className='linkPage'>
-                    <Link to={"/roulettelist"}>ルーレット一覧へ</Link>
+                    <Link to={"/roulettelist"}>ルーレット一覧へ<div class="lineArrow"></div></Link>
                   </div>
                 </div>
               </div>

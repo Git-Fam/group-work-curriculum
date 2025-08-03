@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import {useState} from "react";
 import './App.css';
 import Navbar from './components/Navbar';
+import Score from './components/score';
 import Top from "./components/Top";
 import Login from './components/Login';
 import NewUserCreate from "./components/NewUserCreate";
@@ -18,6 +19,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/navber' element={<Navbar />}></Route>
+        <Route path='/score' element={<Score />}></Route>
         <Route path='/' element={<Top />}></Route>
         <Route path='/login' element={<Login />}>Login</Route>
         <Route path='/newusercreate' element={<NewUserCreate />}>Siginup</Route>

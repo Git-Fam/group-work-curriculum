@@ -33,13 +33,7 @@ const ScoreList = () => {
                 <div className='form'>
                     <div className='scoreRanking'>
                     <p className='subTitle'>スコア</p>
-                    <div className='scoreGroup inContents'>
-                        <div className='scoreGauge'>
-                        <p className='scoreNumbar'>{maxScore}</p>
-                        <div className='myScore'></div>
-                        </div>
-                        <div className='date'>{maxScoreDate}</div>
-                    </div>
+                    
                     <div className='scoreGroup inContents'>
                         <div className='scoreGauge'>
                         <p className='scoreNumbar'>{maxScore}</p>
