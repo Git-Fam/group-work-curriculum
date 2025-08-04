@@ -1,0 +1,143 @@
+.signWrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* 背景画像にぼかしを適用 */
+.signWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -2;
+}
+
+/* グラデーションで色をかける（乗算モード） */
+.signWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, #1EB535 0%, #E1FBE5 100%);
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+
+.signBox {
+    height: 463px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.signTitle {
+    font-family: 'Agbalumo';
+    font-size: 36px;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 38px;
+}
+
+.signuser{
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+}
+
+.signName {
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+.signUserName {
+    width: 370px;
+    height: 36px;
+    opacity: 1;
+    top: 108px;
+    left: 40px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.signMail{
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+    margin-top: 24px;
+}
+
+.signAdress{
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+.signMailAdress{
+    width: 370px;
+    height: 36px;
+    opacity: 1;
+    top: 108px;
+    left: 40px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.signPass{
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+    margin-top: 24px;
+}
+
+.signPass2 {
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+.signPass3 {
+    width: 370px;
+    height: 36px;
+    opacity: 1;
+    top: 108px;
+    left: 40px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.signButton {
+    height: 36px;
+    width: 370px;
+    margin-top: 35px;
+    background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
+    border: 1px solid rgba(48, 48, 48, 1);
+    border-radius: 5px;
+    box-shadow: 3px 6px 10px 4px rgba(0, 0, 0, 0.25);
+}

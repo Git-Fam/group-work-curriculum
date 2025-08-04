@@ -1,0 +1,79 @@
+.typingSelectWrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.typingSelectWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -2;
+}
+
+.typingSelectWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, #1EB535 0%, #E1FBE5 100%);
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+
+.selectButton{
+    display: flex;
+    width: 716px;
+    height: 126px;
+    gap: 30px;
+}
+
+.selectDefault{
+    width: 343px;
+    height: 106px;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
+
+    font-family: Agbalumo;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 5%;
+
+}
+
+.selectRoulette{
+    width: 343px;
+    height: 106px;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 1;
+    border-radius: 10px;
+    /* gap: 10px;
+    padding: 10px; */
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 1);
+
+    font-family: Agbalumo;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 5%;
+
+}

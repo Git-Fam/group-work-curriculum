@@ -1,0 +1,125 @@
+.rouletteWrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.rouletteWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -2;
+}
+
+.rouletteWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, #1EB535 0%, #E1FBE5 100%);
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+
+.rouletteList{
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+    width: 880px;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.rouletteListTitle{
+    font-size: 36px;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 38px;
+}
+
+.listHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.rouletteList2{
+    width: 740px;
+    height: 218px;
+}
+
+.moveCreatePage{
+    width: 80px;
+    height: 20px;
+    opacity: 1;
+    left: 634.64px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/* グラフ */
+.rouletteList3{
+    border-collapse: collapse;
+    border: solid 1px black;
+    width: 690px;
+    height: 192px;
+    margin: auto;
+    text-align: center;
+}
+
+.rouletteList3 th,.rouletteList3 td{
+    border: solid 1px black;
+}
+
+.rouletteList3 th{
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgba(187, 200, 255, 1);
+}
+
+.rouletteEdit,.rouletteDelete{
+    width: 50px;
+    height: 17px;
+    font-size: 10px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleB{
+    width: 342.5px;
+}
+
+.dateB{
+    width: 189px;
+}
+
+.editB,.deleteB{
+    width: 80px;
+}
+
+.rouletteEdit{
+    background-color: rgba(187, 200, 255, 1);
+    box-shadow: 0px 1.5px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.rouletteDelete{
+    background-color: rgba(202, 202, 202, 1);
+    box-shadow: 0px 1.5px 0px 0px rgba(0, 0, 0, 1);
+}

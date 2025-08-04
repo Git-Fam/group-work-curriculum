@@ -1,0 +1,184 @@
+.scoreListWrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.scoreListWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -2;
+}
+
+.scoreListWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, #1EB535 0%, #E1FBE5 100%);
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+
+.scoreLists{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 880px;
+    width: 880px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.scoreTitles{
+    font-size: 36px;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 38px;
+}
+
+.scoreList{
+    width: 740px;
+    gap: 30px;
+}
+
+.listWrapper{
+    height: 438px;
+}
+
+/* スコアグラフ */
+.scoreGraph2{
+    align-items: center;
+    width: calc(100% - 40px);
+    width: 100%;
+    max-width: 690px;
+    margin: 0 auto;
+    
+}
+
+
+.scoreWrapper{
+    height: 66px;
+    padding-bottom: 20px;
+}
+
+.scoreWrapper2{
+    height: 80px;
+}
+
+.scoreDate1{
+    margin-top: -10px;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    text-align: right;
+}
+
+.bar2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 31px;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  line-height: 31px;
+  font-size: 16px;
+  color: white;
+  padding: 0 0 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.bar2::before{
+  content:'';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 31px;
+  top: 0;
+  z-index: 0;
+  background: rgba(217, 217, 217, 1);
+}
+.bar2::after{
+  content: '';
+  background: rgba(0, 255, 9, 1);
+  height: 31px;
+  transition: 0.7s;
+  display: block;
+  width: 100%;
+  -webkit-animation: bar-before 1 1.8s;
+  animation:  bar-before 1 1.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bar2 span {
+  position: relative;
+  top: -5px;
+  z-index: 2;
+  font-family: Noto Sans JP;
+  color: rgba(48, 48, 48, 1);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 5%;
+}
+
+
+.barA::after{
+  max-width: 80%;
+}
+
+.barB::after{
+  max-width: 80%;
+}
+
+.barC::after{
+  max-width: 80%;
+}
+
+.barD::after{
+  max-width: 80%;
+}
+
+.barE::after{
+  max-width: 80%;
+}
+
+.barF::after{
+  max-width: 80%;
+  background-color: rgba(0, 242, 255, 1);
+}
+
+.barG::after{
+  max-width: 20%;
+  background-color: rgba(255, 83, 83, 1);
+}
+
+.corect{
+    padding-top: 30px;
+}
+.unCorect{
+    padding-top: 30px;
+}

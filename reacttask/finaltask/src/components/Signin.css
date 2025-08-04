@@ -1,0 +1,122 @@
+.loginWrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* 背景画像にぼかしを適用 */
+.loginWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -2;
+}
+
+/* グラデーションで色をかける（乗算モード） */
+.loginWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, #1EB535 0%, #E1FBE5 100%);
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 384px;
+    width: 450px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+.loginTitle {
+    font-family: 'Agbalumo';
+    font-size: 36px;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 38px;
+}
+
+.loginInput{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 35px;
+}
+
+.loginUser{
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+}
+
+.loginName {
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    margin-left: 10px;
+}
+
+.loginUserName {
+    width: 370px;
+    height: 36px;
+    opacity: 1;
+    top: 108px;
+    left: 40px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.loginPass{
+    height: 55px;
+}
+
+.loginPass2 {
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    margin-left: 10px;
+}
+
+.loginPass3 {
+    width: 370px;
+    height: 36px;
+    opacity: 1;
+    top: 108px;
+    left: 40px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.loginButton {
+    height: 36px;
+    width: 370px;    
+    background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
+    border: 1px solid rgba(48, 48, 48, 1);
+    border-radius: 5px;
+    box-shadow: 3px 6px 10px 4px rgba(0, 0, 0, 0.25);
+}

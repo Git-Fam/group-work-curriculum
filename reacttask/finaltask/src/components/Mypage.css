@@ -1,0 +1,345 @@
+.myWrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.myWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -2;
+}
+
+.myWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, #1EB535 0%, #E1FBE5 100%);
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+
+.myBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 743px;
+    width: 880px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.myTitle {
+    font-family: Agbalumo;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 5%;
+
+    margin-top: 16px;
+    margin-bottom: 38px;
+}
+
+.myInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* ログインユーザー情報 */
+.logUserInfo{
+    width: 740px;
+    height: 77px;
+}
+
+.logUser{
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+.logName{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.logName2{
+    width: 133px;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+.logName3{
+    font-size: 16px;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+.logName4{
+    font-size: 16px;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    margin-left: 25px;
+}
+
+.logAdress{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.logAdress2{
+    width: 133px;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+.logAdress3{
+    font-size: 16px;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+.logAdress4{
+    font-size: 16px;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    margin-left: 25px;
+}
+
+
+/* スコアグラフ */
+
+.myScoreBord{
+    width: 740px;
+    height: 139px;
+}
+
+.myScore{
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+
+.myScoreGraph{
+    align-items: center;
+    width: calc(100% - 40px);
+    width: 100%;
+    max-width: 690px;
+    margin-top: 22px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.myScoreDate{
+    margin-top: -10px;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    text-align: right;
+}
+
+.moveScorePage{
+    height: 18px;
+    opacity: 1;
+    top: 121px;
+    left: 591px;
+    border-width: 1px;
+    border: 1px solid rgba(48, 48, 48, 1);
+    margin-top: 30px    ;
+    margin-left: 591px;
+
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+
+}
+
+.bar1{
+  display: flex;
+  height: 30px;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  font-size: 16px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.bar1::before{
+  content:'';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background: rgba(217, 217, 217, 1);
+}
+.bar1::after{
+  content: '';
+  background: rgba(0, 255, 9, 1);
+  height: 31px;
+  transition: 0.7s;
+  display: block;
+  width: 100%;
+  -webkit-animation: bar-before 1 1.8s;
+  animation:  bar-before 1 1.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bar1 span {
+  position: relative;
+  top: -5px;
+  z-index: 2;
+  font-family: Noto Sans JP;
+  color: rgba(48, 48, 48, 1);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 5%;
+}
+
+
+.barA::after{
+  max-width: 80%;
+}
+/* ルーレット */
+
+
+.myRouletteBord{
+    width: 740px;
+    height: 169px;
+}
+
+.myRouletteTitle{
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    letter-spacing: 5%;
+}
+
+
+.myRouletteList{
+    border-collapse: collapse;
+    border: solid 1px black;
+    width: 690px;
+    height: 96px;
+    margin: auto;
+    text-align: center;
+}
+
+.myRouletteList th,.myRouletteList td{
+    border: solid 1px black;
+}
+
+.myRouletteList th{
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    letter-spacing: 5%;
+    background-color: rgba(187, 200, 255, 1);
+}
+
+.listTitleA{
+    width: 342.5px;
+}
+
+.moveRoulettePage{
+    height: 18px;
+    opacity: 1;
+    top: 121px;
+    left: 591px;
+    border-width: 1px;
+    border: 1px solid rgba(48, 48, 48, 1);
+    margin-top: 30px;
+    margin-left: 561px;
+
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+}
+
+.moveTry{
+    height: 88px;
+    width: 450px;
+    margin: auto;
+    border-radius: 10px;
+    border-width: 1px;
+    background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
+    border: 1px solid rgba(48, 48, 48, 1);
+
+    font-family: Noto Sans JP;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 46px;
+    letter-spacing: 5%;
+    text-align: center;
+}
