@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Link, Route } from"react-router-dom"
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import './App.css';
 import Home from "./components/Home";
 import Login from "./components/Login";
@@ -10,23 +10,37 @@ import Mypage from "./components/Mypage";
 import Sidebar from "./components/Sidebar";
 import { useEffect, useState } from "react";
 
+
+function AppWrapper({ isAuth, setIsAuth }) {
+  const location = useLocation();
+
+
+  const hideSidebarRoutes = ["/login"];
+  const shouldHideSidebar = hideSidebarRoutes.includes(location.pathname);
+
+  return (
+    <div className="app-container">
+      {!shouldHideSidebar && <Sidebar isLoggedIn={isAuth} />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
+        <Route path="/logout" element={<Logout setIsAuth={ setIsAuth} />} />
+        <Route path="/createpost" element={<CreatePost />} />
+        <Route path="/ranking" element={<Ranking />} />
+        <Route path="/postcheck" element={<PostCheck />} />
+        <Route path="/mypage" element={<Mypage />} />
+      </Routes>
+    </div>
+  );
+}
+
 function App() {
-  const [isAuth, setIsAuth] = useState(false)
+  const [isAuth, setIsAuth] = useState(false);
 
   return (
     <Router>
-      <Sidebar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/login" element={<Login setIsAuth={setIsAuth} />}></Route>
-        <Route path="/logout" element={<Logout />}></Route>
-        <Route path="/createpost" element={<CreatePost />}></Route>
-        <Route path="/ranking" element={<Ranking />}></Route>
-        <Route path="/postcheck" element={<PostCheck />}></Route>
-        <Route path="/mypage" element={<Mypage />}></Route>
-      </Routes>
+      <AppWrapper isAuth={isAuth} setIsAuth={setIsAuth} />
     </Router>
-
   );
 }
 
