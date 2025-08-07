@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import "./css/RouletteList.css";
 import Navbar from "./Navbar";
+import RouletteListItem from './RouletteListItem';
 
 const RouletteList = () => {
   return (
@@ -27,48 +28,13 @@ const RouletteList = () => {
                           <th></th>
                           <th></th>
                       </tr>
-                      <tr>
-                          <td className='titleTD'>〇〇〇〇〇〇〇〇〇〇〇</td>
-                          <td className='dateTD'>2025/01/01</td>
-                          <td><button className='ediButton'>編集</button></td>
-                          <td><button>削除</button></td>
-                      </tr>
-                      <tr>
-                          <td className='titleTD'>〇〇〇〇〇〇〇〇〇〇〇</td>
-                          <td className='dateTD'>2025/01/01</td>
-                          <td><button className='ediButton'>編集</button></td>
-                          <td><button>削除</button></td>
-                      </tr>
-                      <tr>
-                          <td className='titleTD'>〇〇〇〇〇〇〇〇〇〇〇</td>
-                          <td className='dateTD'>2025/01/01</td>
-                          <td><button className='ediButton'>編集</button></td>
-                          <td><button>削除</button></td>
-                      </tr>
-                      <tr>
-                          <td className='titleTD'>〇〇〇〇〇〇〇〇〇〇〇</td>
-                          <td className='dateTD'>2025/01/01</td>
-                          <td><button className='ediButton'>編集</button></td>
-                          <td><button>削除</button></td>
-                      </tr>
-                      <tr>
-                          <td className='titleTD'>〇〇〇〇〇〇〇〇〇〇〇</td>
-                          <td className='dateTD'>2025/01/01</td>
-                          <td><button className='ediButton'>編集</button></td>
-                          <td><button>削除</button></td>
-                      </tr>
-                      <tr>
-                          <td className='titleTD'>〇〇〇〇〇〇〇〇〇〇〇</td>
-                          <td className='dateTD'>2025/01/01</td>
-                          <td><button className='ediButton'>編集</button></td>
-                          <td><button>削除</button></td>
-                      </tr>
-                      <tr>
-                          <td className='titleTD'>〇〇〇〇〇〇〇〇〇〇〇</td>
-                          <td className='dateTD'>2025/01/01</td>
-                          <td><button className='ediButton'>編集</button></td>
-                          <td><button>削除</button></td>
-                      </tr>
+                      <RouletteListItem />
+                      <RouletteListItem />
+                      <RouletteListItem />
+                      <RouletteListItem />
+                      <RouletteListItem />
+                      <RouletteListItem />
+                      <RouletteListItem />
                   </table>
                 </div>
             </div>

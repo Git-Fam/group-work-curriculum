@@ -7,15 +7,17 @@ const Score = () => {
     const maxScoreDate = "2025/01/01";
 
     useEffect(() => {
-        const element = document.getElementById("myScore");
-        element.style.width = maxScore;
+        var getClassName = document.getElementsByClassName("myScore");
+        for (var i = 0; i < getClassName.length; i++){
+            getClassName[i].style.width = maxScore;
+        }
     })
     return (
-            <div className='inContents'>
+            <div>
                 <div className='scoreGroup'>
                     <div className='scoreGauge'>
                         <p className='scoreNumbar'>{maxScore}</p>
-                        <div id='myScore'></div>
+                        <div className='myScore'></div>
                     </div>
                 </div>
                 <div className='date'>{maxScoreDate}</div>

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import {useState} from "react";
 import './App.css';
 import Navbar from './components/Navbar';
-import Score from './components/score';
+import Score from './components/Score';
 import Top from "./components/Top";
 import Login from './components/Login';
 import NewUserCreate from "./components/NewUserCreate";

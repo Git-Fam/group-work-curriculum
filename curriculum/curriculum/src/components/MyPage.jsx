@@ -3,20 +3,10 @@ import "./css/MyPage.css";
 import {auth} from "../firebase";
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
+import Score from './Score';
 
 
 const MyPage = () => {
-
-  const myScore = 80;
-
-  const maxScore = myScore + "%";
-  const maxScoreDate = "2025/01/01";
-
-  useEffect(() => {
-    const element = document.getElementById("myScore");
-    element.style.width = maxScore;
-  })
-
   
   return (
     <div className='body'>
@@ -43,13 +33,7 @@ const MyPage = () => {
               <div className='score'>
                 <p className='subTitle'>最高スコア</p>
                 <div className='inContents'>
-                  <div className='scoreGroup'>
-                    <div className='scoreGauge'>
-                      <p className='scoreNumbar'>{maxScore}</p>
-                      <div id='myScore'></div>
-                    </div>
-                  </div>
-                  <div className='date'>{maxScoreDate}</div>
+                  <Score />
                   <div className='linkPage'>
                     <Link to={"/scorelist"}>スコア一覧へ<div class="lineArrow"></div></Link>
                   </div>

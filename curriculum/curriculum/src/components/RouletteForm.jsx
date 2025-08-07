@@ -4,43 +4,21 @@ import "./css/RouletteForm.css";
 import {addDoc, collection} from 'firebase/firestore';
 import {auth,db} from "../firebase";
 import Navbar from "./Navbar";
+import Quest from './Quest';
 
 
 
 const RouletteForm = () => {
 
-    const [count, setCount] = useState(1);
 
-    const [list, setList] = useState("");
-    const [list1, setList1] = useState("");    
-    const [addList, setAddList] = useState([]);
-    
-
-    const createList = () => {
-        setCount(count + 1);
-    }
-
-
-    const createRoulette = async () => {
-        const allList = [...addList, list, list1];
-        await addDoc(collection(db, "roulette"),{
-            addList: allList,
-            id: auth.currentUser.uid
+    useEffect(() => {
+        var quest = document.getElementsByClassName("questList");
+        var i = 1;
+        quest.forEach(function(){
+            (this).prepend("<span>問題" + i + "</span>");
+            i += 1;
         })
-        setList("");
-    }
-
-    const addNewTask =() => {
-    this.setState({
-      tasks: [...this.state.tasks,
-      {
-          task_name: "", 
-          start_datetime: "", 
-          end_datetime: "", 
-          task_memo: ""
-      }]
-    });
-    }
+    })
 
     return ( 
         <>
@@ -58,13 +36,8 @@ const RouletteForm = () => {
                         
                             <div className='rouletteQuestion'>
                                 <div className='rouletteQuestionFlex'>
-                                    <div>
-                                        <label>問題1</label>
-                                        <div className='question'>
-                                            <input type="text" placeholder='〇〇〇〇〇〇〇〇〇'></input>
-                                            <button className='delete'>削除</button>
-                                        </div>
-                                    </div>
+                                    <Quest />
+                                    
                                     <div>
                                         <label>問題2</label>
                                         <div className='question'>

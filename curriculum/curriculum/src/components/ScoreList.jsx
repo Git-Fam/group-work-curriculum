@@ -3,18 +3,18 @@ import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
 import {useEffect} from 'react';
 import "./css/ScoreList.css";
+import Score from './Score';
 
 const ScoreList = () => {
-    const maxScore = 80 + "%";
-    const worstScoreData = 20 + "%";
-    const averageScoreData = 80 + "%";
+
+    const worst = 20;
+    const average = 80;
+
+    const worstScoreData = worst + "%";
+    const averageScoreData = average + "%";
     const maxScoreDate = "2025/01/01";
 
     useEffect(() => {
-        var className1 = document.getElementsByClassName("myScore");
-        for (var i = 0; i < className1.length; i++){
-            className1[i].style.width = maxScore;
-        }
         const element1 = document.getElementById("worstScore");
         element1.style.width = worstScoreData;
 
@@ -35,32 +35,16 @@ const ScoreList = () => {
                     <p className='subTitle'>スコア</p>
                     
                     <div className='scoreGroup inContents'>
-                        <div className='scoreGauge'>
-                        <p className='scoreNumbar'>{maxScore}</p>
-                        <div className='myScore'></div>
-                        </div>
-                        <div className='date'>{maxScoreDate}</div>
+                      <Score />
                     </div>
                     <div className='scoreGroup inContents'>
-                        <div className='scoreGauge'>
-                        <p className='scoreNumbar'>{maxScore}</p>
-                        <div className='myScore'></div>
-                        </div>
-                        <div className='date'>{maxScoreDate}</div>
+                      <Score />
                     </div>
                     <div className='scoreGroup inContents'>
-                        <div className='scoreGauge'>
-                        <p className='scoreNumbar'>{maxScore}</p>
-                        <div className='myScore'></div>
-                        </div>
-                        <div className='date'>{maxScoreDate}</div>
+                      <Score />
                     </div>
                     <div className='scoreGroup inContents'>
-                        <div className='scoreGauge'>
-                        <p className='scoreNumbar'>{maxScore}</p>
-                        <div className='myScore'></div>
-                        </div>
-                        <div className='date'>{maxScoreDate}</div>
+                      <Score />
                     </div>
                 </div>
             
