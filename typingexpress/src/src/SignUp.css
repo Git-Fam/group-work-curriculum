@@ -1,0 +1,83 @@
+  .register-container {
+    max-width: 450px;
+    padding: 16px 40px 90px;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 6px 10px 4px #00000040;
+  }
+
+  .register-Page2{
+    padding: 0 20px;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    gap: 2px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .container:last-child{
+    margin-bottom: 0;
+  }
+
+  .register-Page{
+    padding: 159px 0;
+  }
+  
+  .register-input{
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: #AEAEAE;
+  }
+  
+  .registerPagebtn {
+    max-width: 370px;
+    width: 100%;
+    margin-top: 35px;
+    padding: 10px 163px 10px 162px;
+    border: 1px solid #303030;
+    cursor: pointer;
+    background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
+    border-radius: 5px;
+  }
+
+  .registerbtnformlabel{
+    padding: 0 0 2px 10px;
+  }
+ 
+@media (max-width: 768px) {
+  .register-Page{
+    padding: 201px 0;
+  }
+
+  .container{
+    margin-bottom: 19px;
+  }
+
+  .register-container {
+    max-width: 350px;
+    padding: 12px 31px 70px; 
+  }
+
+  .register-input{
+    max-width: 288px;
+    padding: 8px 12px;
+  }
+  
+  .registerPagebtn {
+    margin-top: 27px;
+    max-width: 288px;
+    padding: 7px 125px 7px 124px;
+  }
+
+}

@@ -1,0 +1,34 @@
+  .signupbtn{
+    width: 111px;
+    height: 35px;
+    color: #000000;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px #000000; 
+    background-color: #EEFF00;
+    padding: 6px 20px;
+  }
+
+  .signupbtn:hover {
+    box-shadow: none;
+    transform: translateY(3px);
+  }
+
+  .headertitle1{
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .headertitle1{
+    text-align: left;
+    }
+    
+    .signupbtn{
+    width: 100px;
+    height: 32px;
+    padding: 6px 18px 5px 18px;
+  }
+
+  }

@@ -1,0 +1,90 @@
+.roulette-Page {
+  padding: 316px 1px;
+  margin-inline: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.roulette-container {
+  display:  flex;
+  justify-content: center;
+}
+
+.roulette {
+  border: 5px solid #303030;
+  background-color: #FFFFFF;
+  width: 450px;
+  height: 90px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 26px 27px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sankaku{
+  font-size: 45px;
+  margin-top: 22px;
+}
+
+.roulette-text {
+  text-align: center;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  animation: scrollText 2s linear infinite;
+}
+
+.roulette-button{
+  max-width: 343px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px 134px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 0px 0px #000000;
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.button-container{
+  margin-top: 58px;
+}
+
+.spinning .roulette-text {
+  /*padding: 26px 27px;*/
+  animation: scrollText 1s linear infinite; 
+}
+
+@keyframes scrollText {
+  0% { transform: translateY(10%); } /* 最初の位置 */
+  100% { transform: translateY(-100%); } /* 終了位置 */
+}
+
+@media (max-width: 391px) {
+  .roulette-Page {
+  padding: 261px 1px;
+  }
+
+  .roulette {
+  width: 388px;
+  padding: 26px 19px;
+  }
+
+  .button-container{
+    margin: 45px 24px;
+  }
+
+}
+
+
+@media (max-width: 390px) {
+  .roulette-button{
+  width: 100%;
+  padding: 10px 0;
+}
+
+}

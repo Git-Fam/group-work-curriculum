@@ -1,0 +1,48 @@
+  .select-Page{
+    align-items: center;
+    margin-inline: auto;
+  }
+
+  .select-Page2{
+   padding: 288px 282px; 
+  }
+
+  .select-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .selectbtn{
+    max-width: 343px;
+    white-space: nowrap;
+    border-radius: 10px;
+    padding: 38px 53px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 0px 0px #000000;
+  }
+
+  .selectbtn:hover {
+    box-shadow: none;
+    transform: translateY(4px);
+  }  
+  
+  @media (max-width: 768px) {
+    .select-Page2{
+    padding: 226px 40px;
+  }
+  
+    .select-container {
+    flex-direction: column;
+    max-width: 350px;
+    justify-content: center;
+  }
+
+  .selectbtn{
+    max-width: 350px;
+    padding: 38px 56px;
+  }
+  
+}
+  

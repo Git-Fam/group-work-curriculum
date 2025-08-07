@@ -1,0 +1,53 @@
+  header{
+    width: 100%;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+  }
+
+  .header{
+    display: flex;
+    width: 100%;
+    height: 53px;
+    padding: 9px 0;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .headertitle {
+    font-family: 'Agbalumo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    color: #303030;
+    text-shadow: 2px 1px 0px #FFFFFF;
+    flex-grow: 1;
+}
+
+.loginbtn{
+    position: absolute;
+    left: 100px;
+  }
+
+  .signupbtn{
+    position: absolute;
+    right: 100px;
+  }
+
+
+@media (max-width: 768px) { 
+  .header{
+    padding: 12px 20px;
+  }
+
+  .loginbtn{
+    left: 20px; 
+  }
+
+  .signupbtn{
+    right: 20px; 
+  }
+
+}

@@ -1,0 +1,59 @@
+.title {
+  font-size: 90px;
+  text-shadow: 7px 0px 0px #FFFFFF;
+  margin-inline: auto;
+  }
+
+  .btn-container {
+  margin: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 159px;
+  }
+
+  .a{
+    position: absolute;
+  }
+  
+.top-container{
+  padding-top: 250px;
+  }
+
+.top-Page{
+  padding: 0 54px 0 55px;
+}
+
+.space{
+  display: none;
+}
+  
+@media (max-width: 768px) {
+
+.title {
+  font-size: 70px;
+  }
+
+.space{
+  display: block;
+}
+
+.btn-container {
+  margin-top: 63px;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  }
+
+  .a1{
+    position: relative;
+    padding: 0 140px 35px 0;
+  }
+
+.a2{
+    position: relative;
+    padding-left: 140px;
+  }
+  
+
+}

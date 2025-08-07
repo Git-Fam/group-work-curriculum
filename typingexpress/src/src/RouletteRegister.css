@@ -1,0 +1,148 @@
+.roulette-register-Page{
+  padding: 162px 200px;
+}
+
+.roulette-register-container {
+  max-width: 880px;
+  background-color: #FFFFFF;
+  box-shadow: 3px 6px 10px 4px #00000040;
+  padding: 16px 70px 133px;
+  margin-inline: auto;
+  align-items: center;
+}
+
+.roulette-register-form{
+  max-width: 720px;
+  width: 100%;
+  margin-inline: auto;
+  align-items: center;
+}
+
+.formcontainer{
+  max-width: 720px;
+  margin-bottom: 29px;
+}
+
+.titleform{
+  width: 100%;
+  max-width: 720px;
+  border-radius: 5px;
+  border: 1px solid #303030;
+  padding: 8px 5px;
+  
+}
+
+.formcontainer2{
+  border: 1px solid #000000;
+  padding: 15px 15px 21px 15px;
+}
+
+.roulette-register-Page p{
+  margin-bottom: 2px;
+}
+
+.option-container{
+  display: flex;
+  align-items:center;
+}
+
+.option-container2{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-input{
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.deretebutton{
+  max-width: 79px;
+  height: 34px;
+  padding: 12px 27px;
+  border: 1px solid #000000;
+  font-size: 10px;
+  color: #000000;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  margin-left: 11px;
+  box-shadow: 0px 3px 0px #000000;
+  letter-spacing: 0.5em;
+}
+
+.plusbutton{
+  width: 100%;
+  max-width: 691px;
+  height: 34px;
+  padding: 13px 0 11px;
+  margin-top: 34px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  box-shadow: 0px 3px 0px #000000;
+  font-size: 10px;
+}
+
+.rouletteregister-btn{
+  background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 720PX;
+  height: 36PX;
+  padding: 10px 0;
+  margin-top:29px;
+  font-weight: 700;
+  color: #000000;
+  box-shadow: 0px 3px 0px #000000;
+}
+
+.update-btn{
+  background: linear-gradient(180deg, #C2F3FF 0%, #00CCFF 100%);
+  margin-bottom: 9px;
+}
+
+.delete-btn2{
+  background: #D9D9D9;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 720PX;
+  height: 36PX;
+  padding: 10px 340px;
+  margin-top:29px;
+  font-weight: 700;
+  color: #000000;
+  box-shadow: 0px 3px 0px #000000;
+}
+
+.rouletteregister-btn:hover,.plusbutton:hover,.deretebutton:hover,.delete-btn:hover {
+    box-shadow: none;
+    transform: translateY(3px);
+  }  
+
+@media (max-width: 768px) {
+  .roulette-register-Page{
+    padding: 162px 20px;
+  }
+  
+  .plusbutton{
+  
+  height: 34px;
+  padding: 12px 0;
+  margin-top: 30px;
+}
+
+.rouletteregister-btn{
+  height: 39PX;
+  padding: 10px 0;
+  margin-top:25px;
+  font-weight: 700;
+}
+
+.update-btn{
+  margin-bottom: 12px;
+}
+}

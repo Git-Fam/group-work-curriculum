@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 5%;
+  text-decoration: none;
+}
+
+button{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 5%;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+.selectbtn-text{
+  font-family: Agbalumo;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 5%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  body{
+    font-size: 12px;
+  }
+
+}
