@@ -8,18 +8,11 @@ import Quest from './Quest';
 
 
 
+
 const RouletteForm = () => {
 
 
-    useEffect(() => {
-        var quest = document.getElementsByClassName("questList");
-        var i = 1;
-        quest.forEach(function(){
-            (this).prepend("<span>問題" + i + "</span>");
-            i += 1;
-        })
-    })
-
+ 
     return ( 
         <>
         <div className='body'>

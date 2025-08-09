@@ -24,9 +24,9 @@ const RouletteList = () => {
                   <table className='rouletteList'>
                       <tr>
                           <th>ルーレットタイトル</th>
-                          <th>作成日</th>
-                          <th></th>
-                          <th></th>
+                          <th className='thDate'>作成日</th>
+                          <th className='thButton'></th>
+                          <th className='thButton'></th>
                       </tr>
                       <RouletteListItem />
                       <RouletteListItem />

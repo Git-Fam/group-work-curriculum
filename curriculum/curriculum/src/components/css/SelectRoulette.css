@@ -1,22 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Sans+JP:wght@100..900&display=swap');
+
 .selectBody{
-    padding: 245px 0 297px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .selectButton{
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: calc((30 / 1280) * 100vw);
     align-items: center;
 }
 
 .selectButton button{
+    font-family: "Agbalumo", system-ui;
     width: 343px;
     padding: 38px 0;
     font-size: 30px;
 }
 
+@media screen and (max-width: 800px) {
+    .selectButton button{
+        width: calc((343 / 800) * 100vw);
+    }
+}
+
 @media screen and (max-width: 390px) {
     .selectButton{
         flex-direction: column;
+    }
+    .selectButton button{
+        width: calc((350 / 390) * 100vw);
     }
 }

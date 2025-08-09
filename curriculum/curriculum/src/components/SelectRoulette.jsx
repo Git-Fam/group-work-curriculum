@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
 import "./css/SelectRoulette.css"
-
+ 
 const SelectRoulette = () => {
   return (
     <div className='body'>

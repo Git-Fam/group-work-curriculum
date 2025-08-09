@@ -12,6 +12,9 @@
     border: none;
     border-bottom: solid 2.5px #000;
 }
+.rouletteListBody button:hover{
+    border-bottom: none;
+}
 
 /* タイトル部分 */
 .rouletteListBase{
@@ -28,8 +31,14 @@
 }
 
 /* リスト表部分 */
-.rouletteList th, .rouletteList td{
-    padding: 3px 0;
+.thDate{
+    width: calc((189 / 1280) * 100vw);
+}
+.thButton{
+    width: 80px;
+}
+th{
+    box-sizing: border-box;
 }
 
 .ediButton{
@@ -37,7 +46,6 @@
 }
 .rouletteList button{
     width: 50px;
-    padding: 3px auto;
     font-size: 10px;
 }
 
