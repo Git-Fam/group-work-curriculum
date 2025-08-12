@@ -12,6 +12,12 @@ import Quest from './Quest';
 const RouletteForm = () => {
 
 
+    useEffect(() => {
+        const number = document.querySelectorAll('.questList span');
+        for (let i = 0; i < number.length; i++){
+            number[i].textContent = `問題${i + 1}`;
+        }
+    },[]);
  
     return ( 
         <>
