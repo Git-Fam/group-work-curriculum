@@ -36,35 +36,10 @@ const RouletteForm = () => {
                             <div className='rouletteQuestion'>
                                 <div className='rouletteQuestionFlex'>
                                     <Quest />
-                                    
-                                    <div>
-                                        <label>問題2</label>
-                                        <div className='question'>
-                                            <input type="text" placeholder='〇〇〇〇〇〇〇〇〇' />
-                                            <button className='delete'>削除</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label>問題3</label>
-                                        <div className='question'>
-                                            <input type="text" placeholder='〇〇〇〇〇〇〇〇〇' />
-                                            <button className='delete'>削除</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label>問題4</label>
-                                        <div className='question'>
-                                            <input type="text" placeholder='〇〇〇〇〇〇〇〇〇' />
-                                            <button className='delete'>削除</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label>問題5</label>
-                                        <div className='question'>
-                                            <input type="text" placeholder='〇〇〇〇〇〇〇〇〇' />
-                                            <button className='delete'>削除</button>
-                                        </div>
-                                    </div>
+                                    <Quest />
+                                    <Quest />
+                                    <Quest />
+                                    <Quest />
                                 </div>
 
                                 <button className='addQuestion'>問題追加</button>

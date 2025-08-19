@@ -1,5 +1,8 @@
 .choiseBody{
-    padding: 263px 0 182px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 .choiseButton{
     display: flex;
@@ -9,22 +12,32 @@
 }
 .selectTitle{
     display: flex;
+    align-items: center;
 }
 .titleChoise{
     font-size: 25px;
-    padding: 26px 0;
-    width: 450px;
-    justify-content: center;
+    box-sizing: content-box;
+    
+    position: relative;
+    padding: 26px 27px;
+    
     border: 5px #000 solid;
 }
-.startButton{
+.titleChoise div{
+    overflow: hidden;
+    height: 38px;
+    width: calc((100vw - 1280px) / 5 + 396px);
+}
+#rouletteStartButton{
+    font-family: "Agbalumo", system-ui;
+    padding: 2.5px 0;
     font-size: 30px;
     width: 343px;
-    padding: 10px 0;
+    border: none;
     box-shadow: 0 4px #000;
     border-radius: 10px;
 }
-.startButton:hover{
+#rouletteStartButton:hover{
     box-shadow: none;
 }
 .choise{
@@ -32,4 +45,5 @@
     font-size: 45px;
     aspect-ratio: 1;
     line-height: 91px;
+    margin: 0;
 }

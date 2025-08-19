@@ -1,5 +1,8 @@
-.typingBody{
-    padding: 67px 0 81px;
+.typingStartBody{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 .typingArea{
     margin: auto;
@@ -11,10 +14,17 @@
 .questionNumber{
     font-size: 30px;
 }
-.startButton{
+.typingStart{
+    font-family: "Agbalumo", system-ui;
+    font-size: 30px;
     width: calc((100vw - 1280px) / 4 + 463px);
     padding: 52px 0;
+    box-shadow: 0 4px #000;
+    border-radius: 10px;
     margin-top: 133px;
+}
+.typingStart:hover{
+    box-shadow: none;
 }
 
 @media screen and (max-width: 390px) {

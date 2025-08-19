@@ -12,14 +12,14 @@ import RouletteForm from "./components/RouletteForm";
 import ScoreList from "./components/ScoreList";
 import SelectRoulette from './components/SelectRoulette';
 import RouletteChoise from './components/RouletteChoise';
-import TypingPractice from './components/TypingPractice';
+import TypingStart from './components/TypingStart';
+import Typing from './components/Typing';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/navber' element={<Navbar />}></Route>
-        <Route path='/score' element={<Score />}></Route>
         <Route path='/' element={<Top />}></Route>
         <Route path='/login' element={<Login />}>Login</Route>
         <Route path='/newusercreate' element={<NewUserCreate />}>Siginup</Route>
@@ -29,7 +29,8 @@ function App() {
         <Route path='/rouletteform' element={<RouletteForm />}></Route>
         <Route path='/selectroulette' element={<SelectRoulette />}></Route>
         <Route path='/roulettechoise' element={<RouletteChoise />}></Route>
-        <Route path='/typingpractice' element={<TypingPractice />}></Route>
+        <Route path='/typingstart' element={<TypingStart />}></Route>
+        <Route path='/typing' element={<Typing />}></Route>
       </Routes>
     </Router>
   );

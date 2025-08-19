@@ -11,7 +11,7 @@ const SelectRoulette = () => {
         <div className='selectBody'>
             <div className='selectButton'>
                 <button>
-                <Link to="">Default choice</Link>
+                <Link to="/typingstart">Default choice</Link>
                 </button>
                 <button>
                 <Link to="/roulettechoise">Roulette  choice</Link>

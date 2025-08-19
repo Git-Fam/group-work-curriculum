@@ -1,9 +1,31 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
-import "./css/RouletteChoise.css"
+import "./css/RouletteChoise.css";
+import { useNavigate } from 'react-router-dom';
 
 const RouletteChoise = () => {
+
+  const navigate = useNavigate();
+  let buttonIvent = 1;
+
+  const buttonIventNumber = () =>{
+    
+    const buttonChoiseText = document.getElementById('rouletteStartButton')
+    buttonIvent ++;
+    if (buttonIvent === 1) {
+      buttonChoiseText.innerHTML = 'Start';
+    }else if (buttonIvent === 2) {
+      buttonChoiseText.innerHTML = 'Stop';
+    }else if (buttonIvent === 3) {
+      buttonChoiseText.innerHTML = 'select';
+      
+    }else if (buttonIvent === 4){
+      navigate("/typingstart")
+    }    
+  } 
+
+
   return (
     <div className='body'>
       <div className='baseColor'>
@@ -13,12 +35,12 @@ const RouletteChoise = () => {
                 <div className='selectTitle'>
                     <div className='choise'>&#9654;</div>
                     <button className='titleChoise'>
-                        タイトルタイトルタイトル
+                        <div>タイトルタイトルタイトル</div>
                     </button>
                     <div className='choise'>&#9664;</div>
                 </div>
-                <button className='startButton'>
-                <Link to="/typingpractice">Start</Link>
+                <button onClick={buttonIventNumber} id='rouletteStartButton'>
+                  Start
                 </button>
             </div>
         </div>
@@ -26,5 +48,6 @@ const RouletteChoise = () => {
     </div>        
   )
 }
+
 
 export default RouletteChoise;
