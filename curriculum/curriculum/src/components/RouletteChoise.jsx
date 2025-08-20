@@ -30,7 +30,7 @@ const RouletteChoise = () => {
     <div className='body'>
       <div className='baseColor'>
         <Navbar />
-        <div className='choiseBody'>
+        <div className='baseBody'>
             <div className='choiseButton'>
                 <div className='selectTitle'>
                     <div className='choise'>&#9654;</div>
@@ -39,7 +39,7 @@ const RouletteChoise = () => {
                     </button>
                     <div className='choise'>&#9664;</div>
                 </div>
-                <button onClick={buttonIventNumber} id='rouletteStartButton'>
+                <button onClick={buttonIventNumber} id='rouletteStartButton' className='mainFont'>
                   Start
                 </button>
             </div>
