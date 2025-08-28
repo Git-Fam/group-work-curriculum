@@ -7,8 +7,18 @@
   letter-spacing: 5%;
   animation: riseAndRotate 3s ease-in-out infinite;
   bottom: 0;
-  z-index: 999;
   color: #000000;
+  overflow: hidden;
+}
+
+.animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
   overflow: hidden;
 }
 

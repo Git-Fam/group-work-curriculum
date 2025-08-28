@@ -3,14 +3,13 @@ import { useNavigate } from "react-router-dom";
 import "./MyPage.css";
 import "../App.css";
 import Header from "./components/Header/Headerlogout";
-import Textanimation from"./components/Textanimation";
 
 const MyPage = () => {
   const navigate = useNavigate();
 
   return (
     <div className="mypage-Page">
-      <Textanimation />
+      
       <Header />
       <div className="mypage-Page2">
       <div className="mypage-container">
@@ -33,7 +32,7 @@ const MyPage = () => {
             </div>
             <p className="score-value">0%</p>
             <p className="score-date">2025/01/01</p>
-            <a href="/score-list" className="score-link link">スコア一覧へ</a>
+            <div className="link link1 "><a href="/score-list" className="score-link">スコア一覧へ</a></div>
           </div>
         </div>
 
@@ -62,11 +61,11 @@ const MyPage = () => {
                   </tr>
               </tbody>
             </table>
-            <div className="arrow"><a href="/roulette-list" className="roulette-link link">ルーレット一覧へ</a></div>
+            <div className="link link2"><a href="/roulette-list" className="roulette-link">ルーレット一覧へ</a></div>
           </div>
         </div>
 
-        <button className="try-btn" onClick={() => navigate("/typing-practice-select")}>TRY</button>
+        <button className="try-btn green" onClick={() => navigate("/typing-practice-select")}>TRY</button>
         
       </div>
       </div>

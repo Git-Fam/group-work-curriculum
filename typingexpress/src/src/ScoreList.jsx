@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import "./ScoreList.css";
 import Header from "./components/Header/Headerlogout";
-import Textanimation from"./components/Textanimation";
-
 
 const ScoreList = () => {
   
   return (
     <div className="scorelist-Page">
       <Header />
-      <Textanimation />
+      
       <div className="scorelist-Page2">
         <div className="scorelist-container">
           <h1 className="registertitle">Score</h1>

@@ -11,6 +11,7 @@ import RouletteRegister from './src/RouletteRegister';
 import TypingPracticeSelect from'./src/TypingPracticeSelect';
 import Roulette from "./src/Roulette";
 import Typing from "./src/Typing";
+import Textanimation from"../src/src/components/Textanimation";
 
 const appStyles = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/img/back-img.png)`,
@@ -27,18 +28,21 @@ function App() {
   return (
     <Router>
       <div style={appStyles}>
-        <Routes>
-          <Route path="/" element={<TopPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/mypage" element={<MyPage />} />
-          <Route path="/score-list" element={<ScoreListPage />} />
-          <Route path="/roulette-list" element={<RouletteList />} />
-          <Route path="/roulette-register" element={<RouletteRegister />} />
-          <Route path="/typing-practice-select" element={<TypingPracticeSelect />} />
-          <Route path="/roulette" element={<Roulette />} />
-          <Route path="/typing" element={<Typing />} />
-        </Routes>
+        <Textanimation />
+          <div className='appbackground'>
+          <Routes>
+            <Route path="/" element={<TopPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/mypage" element={<MyPage />} />
+            <Route path="/score-list" element={<ScoreListPage />} />
+            <Route path="/roulette-list" element={<RouletteList />} />
+            <Route path="/roulette-register" element={<RouletteRegister />} />
+            <Route path="/typing-practice-select" element={<TypingPracticeSelect />} />
+            <Route path="/roulette" element={<Roulette />} />
+            <Route path="/typing" element={<Typing />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

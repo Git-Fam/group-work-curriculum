@@ -25,7 +25,7 @@ function Textanimation() {
           key={index}
           className="animated-character"
           style={{
-            left: `${Math.random() * 80 + 2}%`, // 水平位置
+            left: `${Math.random() * 90 + 2}%`, // 水平位置
             animationDelay: `${Math.random()}s`, // 開始タイミング
             fontSize: `${Math.random() * 120 + 1}px`, // 文字サイズ
           }}

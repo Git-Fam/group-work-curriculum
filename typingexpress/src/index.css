@@ -35,6 +35,10 @@ a{
   text-align: center;
 }
 
+.green:hover{
+  background: linear-gradient(360deg, #E1FBE5 0%, #1EB535 100%); 
+}
+
 @media (max-width: 768px) {
 
   body{

@@ -8,4 +8,7 @@
     text-align: center;
   }
 
-  
+.appbackground{
+    position: relative;
+    overflow: hidden;
+  }

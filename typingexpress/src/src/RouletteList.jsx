@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./RouletteList.css";
 import "../App.css";
 import Header from "./components/Header/Headerlogout";
-import Textanimation from"./components/Textanimation";
 
 const RouletteList = () => {
   const navigate = useNavigate();
@@ -27,13 +26,13 @@ const RouletteList = () => {
   return (
     <div className="roulette-list-Page">
       <Header />
-      <Textanimation />
+      
       <div className="roulette-list-container">
         <h1 className="registertitle">Roulette</h1>
         <div className="r-container">
         <div className="roulette-list-container2">
           <h2>ルーレット</h2>
-          <button className="create-btn roulette-list-btn" onClick={() => navigate("/roulette-register")}>
+          <button className="create-btn roulette-list-btn green" onClick={() => navigate("/roulette-register")}>
             新規作成
           </button>
         </div>

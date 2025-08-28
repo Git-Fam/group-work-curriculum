@@ -100,9 +100,17 @@
   box-shadow: 0px 3px 0px #000000;
 }
 
+.rouletteregister-btn:hover{
+  background: linear-gradient(360deg, #E1FBE5 0%, #1EB535 100%); 
+}
+
 .update-btn{
   background: linear-gradient(180deg, #C2F3FF 0%, #00CCFF 100%);
   margin-bottom: 9px;
+}
+
+.update-btn:hover{
+  background: linear-gradient(360deg, #C2F3FF 0%, #00CCFF 100%);
 }
 
 .delete-btn2{

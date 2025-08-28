@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./RouletteRegister.css";
 import Header from "./components/Header/Headerlogout";
-import Textanimation from"./components/Textanimation";
-
 
 const RouletteRegister = () => {
   const navigate = useNavigate();
@@ -61,7 +59,7 @@ const RouletteRegister = () => {
   return (
     <div className="roulette-register-Page">
       <Header />
-      <Textanimation />
+      
       <div  className="roulette-register-container">
         <h1 className="registertitle">Roulette-Form</h1>
         <form  className="roulette-register-form" onSubmit={handleSubmit}>

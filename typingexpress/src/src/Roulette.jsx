@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Roulette.css";
 import Header from "./components/Header/Headerlogout";
-import Textanimation from"./components/Textanimation";
 
 const Roulette = () => {
   const navigate = useNavigate();
@@ -51,7 +50,7 @@ const Roulette = () => {
   return (
     <div className="roulette-Page">
       <Header />
-      <Textanimation />
+      
       <div className="roulette-container">
         <div className="sankaku">▶</div>
         <div className={`roulette ${isSpinning ? "spinning" : ""}`}>

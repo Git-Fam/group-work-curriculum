@@ -6,9 +6,10 @@ const Headerlogout = () => {
   return (
     <header>
       <div className="header">
+        
         <h1 className="headertitle">Typing Express</h1>
         
-        <Logoutbtn/>
+        <Logoutbtn className='aaa'/>
         
       </div>
     </header>

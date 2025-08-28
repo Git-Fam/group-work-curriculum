@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./TypingPracticeSelect.css";
 import Header from "./components/Header/Headerlogout";
-import Textanimation from"./components/Textanimation";
 
 const TypingPracticeSelect = () => {
   const navigate = useNavigate();
@@ -13,7 +12,7 @@ const TypingPracticeSelect = () => {
 
   return (
     <div className="select-Page">
-      <Textanimation />
+      
       <Header />
       <div className="select-Page2">
         <div className="select-container">
