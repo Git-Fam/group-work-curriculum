@@ -1,6 +1,6 @@
 import './App.css';
 import './reset.css';
-import { BrowserRouter as Router,Routes,Route,Link } from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route,useLocation } from 'react-router-dom';
 import TopPage from './src/TopPage';
 import Login from './src/Login';
 import SignUp from "./src/SignUp";
@@ -22,13 +22,14 @@ const appStyles = {
   width: '100%',
 };
 
+function Animation() {
+  const location = useLocation();
+  const isTypingPage = location.pathname === "/typing";
 
-function App() {
   
   return (
-    <Router>
       <div style={appStyles}>
-        <Textanimation />
+        {!isTypingPage && <Textanimation />}
           <div className='appbackground'>
           <Routes>
             <Route path="/" element={<TopPage />} />
@@ -44,7 +45,13 @@ function App() {
           </Routes>
         </div>
       </div>
-    </Router>
+  );
+}
+  function App() {
+    return (
+      <Router>
+        <Animation />
+      </Router>
   );
 }
 

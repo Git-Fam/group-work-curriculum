@@ -12,6 +12,10 @@ const RouletteRegister = () => {
   const [title, setTitle] = useState(initialState.title);
   const [options, setOptions] = useState(initialState.options);
   const [date, setDate] = useState(initialState.date || new Date().toISOString().split("T")[0]);
+  const [inputValue4, setInputValue4] = useState("○○○○○○○○○");
+  const [inputValue5, setInputValue5] = useState("○○○○○○○○○");
+  const [isFocused4, setIsFocused4] = useState(false);
+  const [isFocused5, setIsFocused5] = useState(false);
 
   // 新しい選択肢を追加
   const addOption = () => {
@@ -55,6 +59,29 @@ const RouletteRegister = () => {
       navigate("/roulette-list");
     }
   };
+
+
+  const handleFocus4 = () => {
+    if (!isFocused4) {
+      setIsFocused4(true);
+      setInputValue4("");
+    }
+  };
+
+  const handleChange4 = (e) => {
+    setInputValue4(e.target.value);
+  };
+  
+  const handleFocus5 = () => {
+    if (!isFocused5) {
+      setIsFocused5(true);
+      setInputValue5("");
+    }
+  };
+
+  const handleChange5 = (e) => {
+    setInputValue5(e.target.value);
+  };
   
   return (
     <div className="roulette-register-Page">
@@ -67,22 +94,28 @@ const RouletteRegister = () => {
           <div className="formcontainer">
             <p>タイトル</p>
             <div className="titleformcontainer">
-            <input type="text" value={title} className="titleform" onChange={(e) => setTitle(e.target.value)} required />
+              <input type="text" value={inputValue4} className="titleform" onFocus={handleFocus4} 
+              onChange={(e) => {handleChange4(e);
+              setTitle(e.target.value);
+              }}required />
             </div>
           </div>
           
           <div className="formcontainer2">
             <div className="optioncontainer2">
-              <p>問題</p>
               <div className="option-container2">
                 {options.map((option, index) => (
                   <div key={index} className="option-container">
-                    <input type="text" className="option-input" value={option} onChange={(e) => {
+                    <p>問題{index + 1}</p>
+                    <div className="option-container-flex">
+                      <input type="text" className="option-input" onFocus={handleFocus5} value={inputValue5}  
+                      onChange={(e) => { handleChange5(e);
                       const newOptions = [...options];
                       newOptions[index] = e.target.value;
                       setOptions(newOptions);
-                    }} required />
-                    <button className="deretebutton" type="button" onClick={() => removeOption(index)}>削除</button>
+                    }}required />
+                      <button className="deretebutton" type="button" onClick={() => removeOption(index)}>削除</button>
+                    </div>
                   </div>
                 ))}
               </div>
