@@ -1,13 +1,14 @@
   .select-Page{
-    align-items: center;
-    margin-inline: auto;
-  }
-
-  .select-Page2{
-   padding: 288px 282px; 
+    position: relative;
+    height: 100vh;
   }
 
   .select-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -41,7 +42,7 @@
 
   .selectbtn{
     max-width: 350px;
-    padding: 38px 56px;
+    padding: 38px 0px;
   }
   
 }

@@ -35,9 +35,14 @@ a{
   text-align: center;
 }
 
+.green {
+  background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
+}
+
 .green:hover{
   background: linear-gradient(360deg, #E1FBE5 0%, #1EB535 100%); 
 }
+
 
 @media (max-width: 768px) {
 

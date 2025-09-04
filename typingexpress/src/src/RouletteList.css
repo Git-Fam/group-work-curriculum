@@ -1,13 +1,14 @@
   .roulette-list-Page{
-    padding: 162px 20px;
-    margin-inline: auto;
-  }
-
-  .r-container{
-    max-width: 740px;
+    position: relative;
+    height: 100vh;
   }
 
   .roulette-list-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
     max-width: 880px;
     padding: 16px 70px 132px ;
     margin: 50px auto;
@@ -18,7 +19,6 @@
   }
 
   .roulette-list-container2{
-    max-width: 715px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,13 +26,7 @@
   }
   
   .roulette-table {
-    max-width: 690px;
-    width: 100%;
     border-collapse: collapse;
-  }
-
-  .roulette-tablecontainer{
-    padding-left: 25px;
   }
   
   .roulette-table th, .roulette-table td {

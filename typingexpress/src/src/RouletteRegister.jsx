@@ -108,8 +108,8 @@ const RouletteRegister = () => {
                   <div key={index} className="option-container">
                     <p>問題{index + 1}</p>
                     <div className="option-container-flex">
-                      <input type="text" className="option-input" onFocus={handleFocus5} value={inputValue5}  
-                      onChange={(e) => { handleChange5(e);
+                      <input type="text" className="option-input" onFocus={handleFocus5} value={option}
+                      onChange={(e) => {
                       const newOptions = [...options];
                       newOptions[index] = e.target.value;
                       setOptions(newOptions);

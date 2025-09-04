@@ -17,6 +17,7 @@ const Typing = () => {
   const [quote, setQuote] = useState("");
   const [isCorrect, setIsCorrect] = useState(null);
   const [score, setScore] = useState(0);
+  const [isComposing, setIsComposing] = useState(false); 
   
 
   const generateRandomWords = () => {
@@ -62,39 +63,42 @@ const Typing = () => {
 
   // タイピング入力
   const handleInputChange = (event) => {
-  const inputValue = event.target.value;
-  setUserInput(inputValue);
+    setUserInput(event.target.value);
+  };
 
-  if (event.key === "Enter" && inputValue === quote) {
-    setIsCorrect(true);
-    setScore((prevScore) => prevScore + 1); //正解数を加算
-    setUserInput(""); //入力をリセット
+  const handleCompositionStart = () => {
+    setIsComposing(true);
+  };
 
-    const nextIndex = currentIndex + 1;
-    if (nextIndex < options.length) {
-    //次の問題へ移動
-      setCurrentIndex(nextIndex);
-      setQuote(options[nextIndex]);
-    } else {
-    //最後の問題のとき
-      const percentageScore = Math.round((score + 1) / options.length * 100); // スコア計算
-      setScore(percentageScore); 
-      setStage("result");
+  const handleCompositionEnd = () => {
+    setIsComposing(false);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" && !isComposing) {
+      const inputValue = userInput;
+
+      if (inputValue === quote) {
+        setIsCorrect(true);
+        setScore((prevScore) => prevScore + 1);
+      } else {
+        setIsCorrect(false);
+      }
+
+      setUserInput("");
+
+      const nextIndex = currentIndex + 1;
+      if (nextIndex < options.length) {
+        setCurrentIndex(nextIndex);
+        setQuote(options[nextIndex]);
+      } else {
+        const finalScore = inputValue === quote ? score + 1 : score;
+        const percentageScore = Math.round((finalScore / options.length) * 100);
+        setScore(percentageScore);
+        setStage("result");
+      }
     }
-  } else if (event.key === "Enter") {
-    setIsCorrect(false);// 間違いの場合 
-    setUserInput("");
-    const nextIndex = currentIndex + 1;
-    if (nextIndex < options.length) {
-      setCurrentIndex(nextIndex);
-      setQuote(options[nextIndex]);
-    }else {
-      const percentageScore = Math.round((score) / options.length * 100); // スコア計算
-      setScore(percentageScore); 
-      setStage("result");
-    }
-  }
-};
+  };
 
 //スコア表示用
   const ScorePercentage = (correctCount, totalWords) => {
@@ -117,6 +121,7 @@ const Typing = () => {
         {stage === "countdown" && (
           <> 
             <div className="backglound">
+              <p className="plactice-title">{selectedTitle}</p>
               <div className="coundown">{countdown}</div>
             </div>
           </>
@@ -130,8 +135,10 @@ const Typing = () => {
               <input
                 type="text"
                 value={userInput}
-                onChange={(e) => handleInputChange(e)}
-                onKeyDown={(e) => handleInputChange(e)} 
+                onChange={handleInputChange}
+                onKeyDown={handleKeyDown}
+                onCompositionStart={handleCompositionStart}
+                onCompositionEnd={handleCompositionEnd}
                 placeholder="ここに入力"
                 className={isCorrect === false ? "incorrect" : "correct"}
               />

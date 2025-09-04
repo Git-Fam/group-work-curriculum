@@ -9,26 +9,20 @@
     box-shadow: 0px 3px 0px #000000; 
     background-color: #62FF00;
     padding: 6px 27px 6px 28px;
-    display: inline-block;
+    transition: transform 0.2s ease;
   }
 
   .loginbtn:hover {
     box-shadow: none;
-    transform: translateY(3px);
-  }
-
-  .headertitle{
-    text-align: center;
+    transform: translateY(calc(-50% + 3px));
   }
 
   @media (max-width: 768px) {
-    .headertitle{
-    text-align: right;
-    }
+  
 
-    .loginbtn{
+  .loginbtn{
     width: 100px;
-    height: 32px;
+    height: 29px;
     padding: 6px 18px 5px 18px;
   }
   

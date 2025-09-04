@@ -8,7 +8,6 @@ import Registerbtn from "./components/Header/Button/SignUpbtn";
 const TopPage = () => {
   return (
     <div className="top-Page">
-      
       <div className="top-container">
         <h1 className="title registertitle">Typing <br className="space"></br>Express</h1>
         <div className="btn-container">

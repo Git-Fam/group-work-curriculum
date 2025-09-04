@@ -11,12 +11,9 @@ const TypingPracticeSelect = () => {
     };
 
   return (
-    <div className="select-Page">
-      
+    <div className="select-Page">   
       <Header />
-      <div className="select-Page2">
         <div className="select-container">
-          
           <button className="selectbtn selectbtn-text" onClick={handleDefaultClick}>
             Default choice
           </button>
@@ -25,7 +22,6 @@ const TypingPracticeSelect = () => {
             Roulette  choice
           </button>
         </div>
-      </div>
     </div>
   );
 };

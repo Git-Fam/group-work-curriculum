@@ -8,7 +8,6 @@ const ScoreList = () => {
     <div className="scorelist-Page">
       <Header />
       
-      <div className="scorelist-Page2">
         <div className="scorelist-container">
           <h1 className="registertitle">Score</h1>
 
@@ -87,7 +86,6 @@ const ScoreList = () => {
           </div>
     
         </div>
-      </div>
     </div>
   )
 };

@@ -35,7 +35,6 @@ const Login = () => {
     <div className="register-Page">
       
       <Header />
-      <div className="register-Page2">
       <div className="register-container">
         <h1 className="registertitle">Login</h1>
         <form>
@@ -51,7 +50,6 @@ const Login = () => {
           <button className="registerPagebtn green">Login</button>
 
         </form>
-      </div>
       </div>
     </div>
   );

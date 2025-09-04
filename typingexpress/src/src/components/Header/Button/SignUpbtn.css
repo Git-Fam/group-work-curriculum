@@ -10,11 +10,12 @@
     background-color: #EEFF00;
     padding: 6px 20px;
     display: inline-block;
+    transition: transform 0.2s ease;
   }
 
   .signupbtn:hover {
     box-shadow: none;
-    transform: translateY(3px);
+    transform: translateY(calc(-50% + 3px));
   }
 
   .headertitle1{
@@ -22,13 +23,9 @@
   }
 
   @media (max-width: 768px) {
-    .headertitle1{
-    text-align: left;
-    }
-    
     .signupbtn{
     width: 100px;
-    height: 32px;
+    height: 29px;
     padding: 6px 18px 5px 18px;
   }
 

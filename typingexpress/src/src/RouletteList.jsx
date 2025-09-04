@@ -29,7 +29,7 @@ const RouletteList = () => {
       
       <div className="roulette-list-container">
         <h1 className="registertitle">Roulette</h1>
-        <div className="r-container">
+        
         <div className="roulette-list-container2">
           <h2>ルーレット</h2>
           <button className="create-btn roulette-list-btn green" onClick={() => navigate("/roulette-register")}>
@@ -65,7 +65,7 @@ const RouletteList = () => {
           </table>
         </div>
         </div>
-      </div>
+      
     </div>
   );
 };

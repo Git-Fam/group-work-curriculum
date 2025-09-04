@@ -26,19 +26,17 @@ const MyPage = () => {
           
         <div className="scoresection-m section">
           <h2>最高スコア</h2>
-            <div className="mypage-container2">
             <div className="progress-container">
               <div className="progress-bar"></div>    
             </div>
             <p className="score-value">0%</p>
             <p className="score-date">2025/01/01</p>
-            <div className="link link1 "><a href="/score-list" className="score-link">スコア一覧へ</a></div>
-          </div>
+            <a href="/score-list" className="link link1 score-link">スコア一覧へ</a>
         </div>
 
         <div className="roulletsection-m section">
           <h2>ルーレット</h2>
-          <div className="mypage-container2 roulette-table-container">
+          <div className="roulette-table-container">
             <table className="roulette-table">
               <thead>
                 <tr>
@@ -61,7 +59,7 @@ const MyPage = () => {
                   </tr>
               </tbody>
             </table>
-            <div className="link link2"><a href="/roulette-list" className="roulette-link">ルーレット一覧へ</a></div>
+            <a href="/roulette-list" className="link link2 roulette-link">ルーレット一覧へ</a>
           </div>
         </div>
 

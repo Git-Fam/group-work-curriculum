@@ -12,6 +12,11 @@ const Roulette = () => {
   //ローカルストレージからルーレットデータを取得
   useEffect(() => {
     const storedRoulettes = JSON.parse(localStorage.getItem("roulettes")) || [];
+    if (storedRoulettes.length === 0) {
+    alert("ルーレットがありません。登録ページに移動します。");
+    navigate("/roulette-register");
+    return;
+  }
     //ルーレットのタイトルを配列として取得
     setOptions(storedRoulettes.map((roulette) => roulette.title));
   }, []);
@@ -50,26 +55,27 @@ const Roulette = () => {
   return (
     <div className="roulette-Page">
       <Header />
-      
-      <div className="roulette-container">
-        <div className="sankaku">▶</div>
-        <div className={`roulette ${isSpinning ? "spinning" : ""}`}>
-          {isSpinning ? (
-            <div className="roulette-text">
-              {options.map((title, index) => (
-                <p key={index}>{title}</p>
-              ))}
-            </div>
-          ) : (
-            <p>{selectedOption || options[0]}</p>
-          )}
+      <div className="roulette-Page-container">
+        <div className="roulette-container">
+          <div className="sankaku">▶</div>
+          <div className={`roulette ${isSpinning ? "spinning" : ""}`}>
+            {isSpinning ? (
+              <div className="roulette-text">
+                {options.map((title, index) => (
+                  <p key={index}>{title}</p>
+                ))}
+              </div>
+            ) : (
+              <p>{selectedOption || options[0]}</p>
+            )}
+          </div>
+          <div className="sankaku">◀</div>
         </div>
-        <div className="sankaku">◀</div>
-      </div>
-      <div className="button-container">
-        <button className="roulette-button selectbtn-text" onClick={handleButtonClick}>
-          {getButtonLabel()}
-        </button>
+        
+          <button className="roulette-button selectbtn-text" onClick={handleButtonClick}>
+            {getButtonLabel()}
+          </button>
+        
       </div>
     </div>
   );

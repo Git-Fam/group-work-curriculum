@@ -9,22 +9,19 @@
     box-shadow: 0px 3px 0px #000000; 
     background-color: #CACACA;
     padding: 6px 20px;
-
+    transition: transform 0.2s ease;
   }
 
   .logoutbtn:hover {
     box-shadow: none;
-    transform: translateY(3px);
+    transform: translateY(calc(-50% + 3px));
   }
 
-  .headertitle2{
-    text-align: center;
-  }
 
   @media (max-width: 768px) {
     .logoutbtn{
     width: 100px;
-    height: 32px;
+    height: 29px;
     padding: 6px 18px 5px 18px;
   }
   }

@@ -48,7 +48,6 @@ const SignUp = () => {
     <div className="register-Page">
    
     <Header />
-    <div className="register-Page2">
       <div className="register-container">
       <h1 className="registertitle">Signup</h1>
         <form>
@@ -68,7 +67,6 @@ const SignUp = () => {
           <button type="submit" className="registerPagebtn green">Signup</button>
 
         </form>
-      </div>
       </div>
     </div>
   );
