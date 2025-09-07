@@ -4,7 +4,7 @@
   font-weight: 400;
   font-family: Unkempt;
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   animation: riseAndRotate 3s ease-in-out infinite;
   bottom: 0;
   color: #000000;

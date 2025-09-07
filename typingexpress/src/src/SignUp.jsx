@@ -64,7 +64,7 @@ const SignUp = () => {
           <label className="registerbtnformlabel">パスワード</label>
           <input className="register-input" value={inputValue3} onChange={handleChange3} onFocus={handleFocus3} type="password"/>
         </div>
-          <button type="submit" className="registerPagebtn green">Signup</button>
+          <button type="submit" className="registerPagebtn green"><span>Signup</span></button>
 
         </form>
       </div>

@@ -1,4 +1,4 @@
-  .mypage-Page2{
+  .mypage-Page{
     position: relative;
     height: 100vh;
   }
@@ -43,19 +43,29 @@
     margin-bottom: 10px;
   }
 
+  .mypage-Page .progress-container {
+    max-width: 690px;
+    margin-left: 25px;
+  }
+
   .try-btn {
+    padding: 21px 0;
+    height: 88px;
+    max-width: 450px;
+    width: 100%;
     border: 1px solid #303030;
     cursor: pointer;
     border-radius: 10px;
-    max-width: 740px;
-    padding: 21px 179px 21px 180px;
     background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
-    font-weight: 700;
-    font-size: 46px;
-    text-align: center;
     margin-inline: auto;
     align-items: center;
     display: block;
+  }
+
+  .try-btn span{
+    font-weight: 700;
+    font-size: 46px;
+    text-align: center;
   }
 
   .score-link,.roulette-link{
@@ -75,11 +85,12 @@
     border-bottom: 1px solid #303030;
     transform: skew(60deg);
     top: 50%;
+    transition: width 0.2s ease;
   }
 
   .link1{
     width: 119px;
-    margin: 30px 30px 0 auto;
+    margin: 30px 49px 0 auto;
   }
 
   .link1::before{
@@ -93,7 +104,7 @@
 
   .link2{
     width: 149px;
-    margin: 30px 30px 0 auto;
+    margin: 30px 45px 0 auto;
   }
 
   .link2::before{
@@ -107,7 +118,6 @@
 
   .roulette-table{
     margin-left: 25px;
-    max-width: 690px;
     border-collapse: collapse;
     text-align: center;
     border: 1px solid #303030;
@@ -144,8 +154,7 @@
     }
 
     .try-btn {
-    max-width: 310px;
-    padding: 21px 108px 21px 111px;
+      max-width: 310px;
     }
     
     .roulette-table-container{
@@ -197,7 +206,6 @@
 
 @media (max-width:420px) {
     .try-btn {
-    width: 100%;
-    padding: 21px 0
+      padding: 21px 0
     }
 }

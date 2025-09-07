@@ -7,7 +7,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   text-decoration: none;
 }
 
@@ -16,7 +16,7 @@ button{
   font-size: 16px;
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   white-space: nowrap;
   border: none;
   cursor: pointer;
@@ -31,18 +31,38 @@ a{
   font-weight: 400;
   font-size: 30px;
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   text-align: center;
 }
 
 .green {
+  position: relative;
   background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
+  overflow: hidden;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.green:hover{
-  background: linear-gradient(360deg, #E1FBE5 0%, #1EB535 100%); 
+.green::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(360deg, #E1FBE5 0%, #1EB535 100%);
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: 0;
 }
 
+.green:hover::before {
+  opacity: 1;
+}
+
+.green > span {
+  position: relative;
+  z-index: 1;
+}
 
 @media (max-width: 768px) {
 

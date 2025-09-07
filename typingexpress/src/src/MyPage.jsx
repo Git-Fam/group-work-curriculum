@@ -11,7 +11,6 @@ const MyPage = () => {
     <div className="mypage-Page">
       
       <Header />
-      <div className="mypage-Page2">
       <div className="mypage-container">
         <h1 className="registertitle">MyPage</h1>
         <div className="profilesection-m section">
@@ -63,10 +62,10 @@ const MyPage = () => {
           </div>
         </div>
 
-        <button className="try-btn green" onClick={() => navigate("/typing-practice-select")}>TRY</button>
+        <button className="try-btn green" onClick={() => navigate("/typing-practice-select")}><span>TRY</span></button>
         
       </div>
-      </div>
+    
     </div>
   );
 };

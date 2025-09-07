@@ -47,7 +47,7 @@ const Login = () => {
             <input className="register-input" value={inputValue2} onChange={handleChange2} onFocus={handleFocus2} type="password"/>
           </div>
 
-          <button className="registerPagebtn green">Login</button>
+          <button className="registerPagebtn green"><span>Login</span></button>
 
         </form>
       </div>

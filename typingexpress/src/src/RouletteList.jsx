@@ -33,7 +33,7 @@ const RouletteList = () => {
         <div className="roulette-list-container2">
           <h2>ルーレット</h2>
           <button className="create-btn roulette-list-btn green" onClick={() => navigate("/roulette-register")}>
-            新規作成
+            <span>新規作成</span>
           </button>
         </div>
         <div className="roulette-tablecontainer">

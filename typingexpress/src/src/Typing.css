@@ -47,7 +47,7 @@
   font-style: Regular;
   font-size: 250px;
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   color: #000000;
   margin-inline: auto;
 }

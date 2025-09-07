@@ -125,9 +125,9 @@ const RouletteRegister = () => {
           
           <button
             type="submit"
-            className={`rouletteregister-btn ${isEditing ? "update-btn" : "create-btn"}`}
+            className={`rouletteregister-btn ${isEditing ? "update-btn" : "green"}`}
           >
-            {isEditing ? "更新" : "登録"}
+            <span>{isEditing ? "変更" : "登録"}</span>
           </button>
 
           {isEditing && (

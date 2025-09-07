@@ -41,7 +41,7 @@
   font-weight: 400;
   font-size: 20px;  
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
 }
 
 .formcontainer2{
@@ -75,7 +75,7 @@
   font-family: Noto Sans JP;
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
 }
 
 .deretebutton{
@@ -88,7 +88,7 @@
   border-radius: 5px;
   background-color: #FFFFFF;
   box-shadow: 0px 3px 0px #000000;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.05em;
 }
 
 .plusbutton{
@@ -105,7 +105,6 @@
 }
 
 .rouletteregister-btn{
-  background: linear-gradient(180deg, #E1FBE5 0%, #1EB535 100%);
   border-radius: 5px;
   width: 100%;
   max-width: 720PX;
@@ -116,17 +115,39 @@
   box-shadow: 0px 3px 0px #000000;
 }
 
-.rouletteregister-btn:hover{
-  background: linear-gradient(360deg, #E1FBE5 0%, #1EB535 100%); 
+.rouletteregister-btn span{
+  font-weight: 700;
+  color: #000000;
 }
 
 .update-btn{
+  position: relative;
   background: linear-gradient(180deg, #C2F3FF 0%, #00CCFF 100%);
+  overflow: hidden;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
   margin-bottom: 9px;
 }
 
-.update-btn:hover{
+.update-btn:before{
   background: linear-gradient(360deg, #C2F3FF 0%, #00CCFF 100%);
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: 0;
+}
+
+.update-btn:hover::before {
+  opacity: 1;
+}
+
+.update-btn > span {
+  position: relative;
+  z-index: 1;
 }
 
 .delete-btn2{

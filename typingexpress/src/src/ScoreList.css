@@ -31,9 +31,11 @@
     margin-bottom: 32px;
   }
 
+  .scorelist-Page .progress-container {
+    margin: 0 25px;
+  }
+
   .progress-container {
-    margin-left: 25px;
-    max-width: 690px;
     height: 31px;
     background-color: #D9D9D9;
     overflow: hidden;
@@ -127,7 +129,7 @@
   }
 
   .score-date{
-    margin: 9px 0px;
+    margin: 9px 22px 9px 20px;
   }
 
   .correct-container {
