@@ -4,6 +4,7 @@ import "./css/RouletteList.css";
 import Navbar from "./Navbar";
 import RouletteListItem from './RouletteListItem';
 
+
 const RouletteList = () => {
   return (
     <>
@@ -16,7 +17,7 @@ const RouletteList = () => {
             <div className='form'>
                 <div className='rouletteListBase'>
                     <p className='subTitle'>ルーレット</p>
-                    <button className='formButton newRoulette'>
+                    <button className='mainButtonDesign newRoulette'>
                         <Link to={"/rouletteform"}>新規作成</Link>
                     </button>                    
                 </div>

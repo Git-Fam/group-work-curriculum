@@ -1,0 +1,29 @@
+/* 全体 */
+.typingQuest .typingArea{
+    padding: 20px 22px 20px;
+}
+
+/* 問題部分 */
+.questText{
+    background-color: #1DD800;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 52px;
+}
+
+/* 入力部分 */
+#typingInput{
+    width: 100%;
+    height: 105px;
+    margin-top: 48px;
+    text-align: center;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.questText, #typingInput{
+    border: 4px solid #000;
+    border-radius: 10px;
+}

@@ -1,0 +1,44 @@
+/* 全体 */
+.resultsBody .typingArea{
+    padding: 20px 0 51px;
+}
+.border{
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+/* スコアの文字 */
+.resultTitle{
+    display: flex;
+    margin-top: 57px;
+    justify-content: center;
+    align-items: center;
+}
+.resultTitle .border{
+    width: 59px;
+    height: 3px;
+}
+.thisScore{
+    font-size: 25px;
+    margin: 0 8px;
+    padding-bottom: 10px;
+}
+
+/* スコア数字 */
+.resultsScore{
+    width: 219px;
+    margin: auto;
+}
+.results{
+    font-size: 100px;
+    width: 219px;
+    margin: auto;
+}
+
+/* ボタン */
+.endButton{
+    height: 75px;
+    width: 463px;
+    margin-top: 60px;
+}

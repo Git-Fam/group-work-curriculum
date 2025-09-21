@@ -20,12 +20,12 @@ const Login = () => {
       <div className='baseColor'>
         <nav>
           <div className='title'>Typing Express</div>
-          <button className='navButton siginButton'>
+          <button className='siginButton'>
             <Link to={"/newusercreate"}>Singup</Link>
           </button>
         </nav>
 
-        <div className='pagePosition'>
+        <div className='baseBody'>
           <div className='baseBG offUserBG'>
             <h2>Login</h2>
             <div className='form'>
@@ -38,7 +38,7 @@ const Login = () => {
                 <input type="password" placeholder='・・・・・・・' value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} />
               </div>
             </div>
-            <button onClick={loginGoogle} className='formButton '>Login</button>
+            <button onClick={loginGoogle} className='formButton mainButtonDesign'>Login</button>
           </div>
         </div>
 

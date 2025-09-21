@@ -4,8 +4,7 @@ import Navbar from "./Navbar";
 import Quest from './Quest';
 import { useNavigate } from 'react-router-dom';
 
-
-const RouletteForm = () => {
+const RouletteFormEdit = () => {
 
     const navigate = useNavigate();
 
@@ -18,9 +17,9 @@ const RouletteForm = () => {
 
     const goRouletteList = () =>{
         navigate("/roulettelist");
-    }    
- 
-    return ( 
+    }
+    
+  return (
         <>
         <div className='body'>
             <div className='baseColor'>
@@ -45,14 +44,15 @@ const RouletteForm = () => {
 
                                 <button className='addQuestion'>問題追加</button>
                             </div>
-                            <button className='upQuestion mainButtonDesign' onClick={goRouletteList}>登録</button>
+                            <button className='upQuestion editButton' onClick={goRouletteList}>変更</button>
+                            <button className='upQuestion bigDeleteButton'>削除</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         </>
-    )
+)
 }
 
-export default RouletteForm;
+export default RouletteFormEdit;

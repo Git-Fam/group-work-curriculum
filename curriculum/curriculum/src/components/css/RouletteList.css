@@ -20,6 +20,7 @@
 .rouletteListBase{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 6px;
 }
 .rouletteListBody .subTitle{
@@ -28,6 +29,8 @@
 }
 .newRoulette{
     width: 80px;
+    font-size: 10px;
+    height: 20px;
 }
 
 /* リスト表部分 */

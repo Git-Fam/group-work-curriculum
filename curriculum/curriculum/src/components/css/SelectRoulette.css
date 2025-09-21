@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Sans+JP:wght@100..900&display=swap');
 
-.selectBody{
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
 
 .selectButton{
     display: flex;
@@ -18,7 +12,10 @@
     font-family: "Agbalumo", system-ui;
     width: 343px;
     padding: 38px 0;
-    font-size: 30px;
+}
+.selectButton a{
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 800px) {

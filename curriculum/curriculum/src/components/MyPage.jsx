@@ -1,12 +1,18 @@
 import React, { useEffect } from 'react';
 import "./css/MyPage.css";
-import {auth} from "../firebase";
+import { useNavigate } from 'react-router-dom';
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
 import Score from './Score';
 
 
 const MyPage = () => {
+
+  const navigate = useNavigate();
+
+  const toSelectroulette = () =>{
+    navigate("/selectroulette")
+  }
   
   return (
     <div className='body'>
@@ -68,9 +74,7 @@ const MyPage = () => {
                   </div>
                 </div>
               </div>
-              <button className='tryButton formButton'>
-                <Link to={"/selectroulette"}>TRY</Link>
-              </button>
+              <button className='tryButton mainButtonDesign' onClick={toSelectroulette}>TRY</button>
             </div>
 
           </div>

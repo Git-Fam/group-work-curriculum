@@ -1,5 +1,4 @@
 import React from 'react';
-import {auth} from "../firebase";
 import { useNavigate } from 'react-router-dom';
 import "./css/Logout.css";
 import {Link} from "react-router-dom";
@@ -17,12 +16,12 @@ const NewUserCreate = () => {
       <div className='baseColor'>
         <nav>
           <div className='title'>Typing Express</div>
-          <button className='navButton loginButton'>
+          <button className='loginButton'>
             <Link to={"/login"}>Login</Link> 
           </button>
         </nav>
 
-        <div className='pagePosition'>
+        <div className='baseBody'>
           <div className='baseBG offUserBG'>
             <h2>Signup</h2>
             <div className='form'>
@@ -39,7 +38,7 @@ const NewUserCreate = () => {
                 <input type="password" placeholder='・・・・・・・' />
               </div>
             </div>
-            <button onClick={handleSubmit} className='signinButton formButton'>Singup</button>
+            <button onClick={handleSubmit} className='signinButton formButton mainButtonDesign'>Singup</button>
           </div>
         </div>
       </div>

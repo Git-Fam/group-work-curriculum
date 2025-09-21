@@ -2,7 +2,7 @@
 
 
 
-/* 全体部分 */
+/* 全体共通部分 */
 .baseColor{
   background: linear-gradient(180deg, rgba(30, 181, 53, 0.5), rgba(225, 251, 229, 0.5));
 }
@@ -28,6 +28,7 @@ a{
   width: 100%;
   display: inline-block;
 }
+
 .mainFont{
   font-family: "Agbalumo", system-ui;  
 }
@@ -37,6 +38,41 @@ a{
     align-items: center;
     justify-content: center;    
 }
+
+.baseBG{
+  box-sizing: border-box;
+  padding: 16px calc((40 / 1280) * 100vw) 90px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  filter: drop-shadow(3px 6px 10px #000); 
+}
+
+h2{
+  font-size: 36px;
+  margin-top: 0;
+}
+
+button, input, .loginButton, .siginButton, .logoutButton{
+  border-radius: 5px;
+}
+
+.mainButtonDesign{
+  border: solid 1px #000;
+  background: linear-gradient(0deg, rgba(30, 181, 53, 1), rgba(225, 251, 229, 1));
+}
+
+.mainButtonDesign:hover{
+  background: linear-gradient(180deg, rgba(30, 181, 53, 1), rgba(225, 251, 229, 1));
+}
+
+/* 文字サイズ30 */
+.endButton, #rouletteStartButton, .selectButton button, .questText, .questionNumber{
+  font-size: 30px;
+}
+
+
 
 /* navバー部分 */
 nav{
@@ -93,36 +129,6 @@ h1, .title{
 }
 .logoutButton{
     margin-left: auto;
-}
-
-/* コンテンツ部分 */
-.baseBG{
-  box-sizing: border-box;
-  padding: 16px calc((40 / 1280) * 100vw) 90px;
-  background-color: #fff;
-  border-radius: 10px;
-  text-align: center;
-  margin: auto;
-  filter: drop-shadow(3px 6px 10px #000); 
-}
-
-h2{
-  font-size: 36px;
-  margin-top: 0;
-}
-
-button, input, .loginButton, .siginButton, .logoutButton{
-  border-radius: 5px;
-}
-
-.formButton{
-  border: solid 1px #000;
-  background: linear-gradient(0deg, rgba(30, 181, 53, 1), rgba(225, 251, 229, 1));
-}
-
-.formButton:hover{
-  background: linear-gradient(180deg, rgba(30, 181, 53, 1), rgba(225, 251, 229, 1));
-  transition: 1s;
 }
 
 @media screen and (max-width: 390px) {

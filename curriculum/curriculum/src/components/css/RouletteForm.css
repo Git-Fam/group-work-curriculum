@@ -5,6 +5,9 @@
 .RouletteFormBody .onUserBG{
     padding: 16px calc((80 / 1280) * 100vw) 130px;
 }
+.RouletteFormBody button{
+    box-shadow: 0 2px #000;
+}
 
 /* タイトル部分 */
 .rouletteTitle{
@@ -38,12 +41,12 @@
     width: 100%;
 }
 .addQuestion{
-    background-color: #fff;
     width: 100%;
 }
 .delete{
     width: 79px;
-    box-sizing: border-box;
+}
+.addQuestion, .delete{
     background-color: #fff;
 }
 .addQuestion{
@@ -58,6 +61,19 @@
     width: 100%;
     padding: 10px 0;
     font-weight: bold;
+    border: none;
+}
+
+/* 編集画面 */
+.editButton{
+    margin-bottom: 8px;
+    background: linear-gradient(0deg, rgba(0, 204, 255, 1), rgba(194, 243, 255, 1));
+}
+.bigDeleteButton{
+    background-color: rgba(217, 217, 217, 1);
+}
+.editButton:hover{
+    background: linear-gradient(0deg, rgba(194, 243, 255, 1), rgba(0, 204, 255, 1));
 }
 
 

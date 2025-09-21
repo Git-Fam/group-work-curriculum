@@ -1,29 +1,28 @@
-.typingStartBody{
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
+/* タイピング画面共通部分 */
 .typingArea{
     margin: auto;
     text-align: center;
-    width: calc((100vw - 1280px) / 1.7 + 880px);
-    padding: 20px 0 183px;
+    width: calc((880 / 1280) * 100vw);
+    padding: 20px 20px 183px;
     background-color: rgba(255, 255, 255, 0.2);
 }
-.questionNumber{
-    font-size: 30px;
+
+
+/* 全体 */
+.typingStart .typingArea{
+    padding: 20px 20px 183px;
 }
-.typingStart{
+
+/* スタートボタン */
+.typingStartButton{
     font-family: "Agbalumo", system-ui;
-    font-size: 30px;
     width: calc((100vw - 1280px) / 4 + 463px);
     padding: 52px 0;
     box-shadow: 0 4px #000;
     border-radius: 10px;
     margin-top: 133px;
 }
-.typingStart:hover{
+.typingStartButton:hover{
     box-shadow: none;
 }
 
@@ -31,10 +30,18 @@
     .typingArea{
         box-sizing: border-box;
         width: 100%;
+    }
+    .typingStart .typingArea{
         padding: 20px 20px 183px;
     }
-    .startButton{
+    .questionNumber{
+        font-size: 24px;
+        padding: 0 35px;
+    }
+    
+    .typingStartButton{
         width: 350px;
         margin-top: 115px;
     }
+
 }
