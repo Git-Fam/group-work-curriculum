@@ -1,16 +1,21 @@
 import React from 'react';
 import "./css/animation.css";
 import {useEffect} from 'react';
+import {useAnimation} from "react-animatable";
 
 const Animation = () => {
 
-    useEffect(() => {
-        const anime = document.getElementById("animation");
-        anime.animate({
-            bottom: "-20px"}, 300, "swing", anime.animate({
-                bottom: "-1000px"}, 10000)
-            );
-    })    
+  const el = document.querySelector("#animation");
+  const playing = el.animate([
+    {transform: "rotateY(0) translateY(40px)", opacity: "0", buttom: "20%"},
+    {transform: "rotateY(360deg) translateY(0)", opacity: "1", buttom: "80%"}
+  ],{
+    duration: 1000,
+  })
+
+  useEffect(() => {
+    playing.play();
+  }, []);
     
     
   return (
