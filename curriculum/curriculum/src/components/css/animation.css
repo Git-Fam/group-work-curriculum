@@ -1,8 +1,6 @@
 #animation{
     display: inline-block;
-    font-size: 50px;
-    margin: auto;
-    position: relative;
+    font-size: 30px;
+    
     font-weight: bold;
-    opacity: 0;
 }
