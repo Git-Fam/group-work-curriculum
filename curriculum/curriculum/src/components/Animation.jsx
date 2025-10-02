@@ -16,25 +16,37 @@ const Animation = () => {
     
 
     for(let i = 0; i < 11; i++){
+      let n = 0;
       const moji = ["あ", "い", "う", "え", "お", "A", "B", "C", "D", "E", "F", "G"];
       const mojiRamdomNum = Math.floor(Math.random() * 10);
 
       const p = document.createElement("p");
-      p.textContent = moji[mojiRamdomNum];
       el.appendChild(p);
-      const marginRandom = Math.random() * (-100 - -50) + 50 + "%";
-      const marginSide = Math.random() * (0 - 100) + 100;
-      el.style.left = marginSide + "%";
 
-      const playing = el.animate([
-        {transform: "rotateY(0)", transform: "translateY(500%)", opacity: "0", offset: "0"},
-        {transform: "rotateY(630deg)", transform: "translateY(marginRandom)", opacity: "1", offset: "0.2"},
-        {transform: "rotateY(360deg)", transform: "translateY(500%)", opacity: "0", offset: "1.0"},
+      el.children[n].textContent = moji[mojiRamdomNum];
+
+      const elChild = el.children[n]      
+
+      const marginSide = Math.random() * (0 - 100) + 100;
+      elChild.style.position = "relative";
+      elChild.style.left = marginSide + "vw";
+
+
+      
+
+      const heightRandom = Math.random() * (-50 - -15) + -15;
+      
+      
+
+      const playing = elChild.animate([
+        {transform: `rotateY(0deg) translateY(100vh)`, buttom: "0vh", opacity: "0", offset: "0"},
+        {transform: `rotateY(360deg) translateY(${heightRandom}vh)`, buttom: "120vh", opacity: "1", offset: "0.2"},
+        {transform: `rotateY(0deg) translateY(100vh)`, buttom: "0vh", opacity: "0", offset: "1.0"},
       ],{
         duration: 10000,
       
   })
-  p.textContent = moji[mojiRamdomNum];
+  n++;
     }
 
     

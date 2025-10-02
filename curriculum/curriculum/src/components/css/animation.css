@@ -1,6 +1,6 @@
 #animation{
     display: inline-block;
     font-size: 30px;
-    
+    position: relative;
     font-weight: bold;
 }
