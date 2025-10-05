@@ -1,85 +1,168 @@
-.login-wrapper {
+    
+  .login-wrapper {
   display: flex;
-  min-height: 100vh;
-  font-family: 'Noto Sans JP', sans-serif;
-  flex-direction: row;
+  height: 100vh;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;  flex-direction: row;
+  margin: 0;
+  width: 100%;
+  background-color: #2E4F23;
 }
 
 .login-left {
-  background-color: #2E4F23; /* 統一された緑 */
+  background-color: #2E4F23;
   color: white;
   width: 250px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 60px;
 }
 
 .login-content {
-  text-align: left;
-  max-width: 300px;
+  text-align: left; 
 }
 
-.small-text {
+.logo { 
+  width: 200px; 
+  padding-top: 10px;
+ }
+
+.small-text { 
   font-size: 14px;
-  margin-bottom: 20px;
-}
+  color: #fff; 
+  padding-bottom: 40px; 
+  text-align: left;
+ }
 
 .mid-text {
-  font-size: 16px;
-  margin-bottom: 32px;
-}
+  font-size: 12px; 
+  color: #fff; 
+  text-align: left;
+  line-height: 30px;
+ }
 
-.logo {
-  width: 150px;
-  margin-bottom: 32px;
-}
 
 .login-button {
-  background: white;
+  background: #ffffff;
   color: #2E4F23;
   border: none;
-  padding: 12px 24px;
+  outline: none;
+  box-shadow: none;
   font-size: 16px;
   border-radius: 999px;
   cursor: pointer;
   transition: 0.3s;
+  height: 40px;
+  width: 200px;
+  flex: 0 0 auto 0;
+  margin-bottom: 60px;
 }
 
 .login-button:hover {
   background: #2E4F23;
   color: white;
-  border: 1px solid white;
 }
 
-.login-right {
-  width: calc(100% - 250px);
-}
-
-.room-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .login-wrapper {
-    flex-direction: column;
+  .mobile-login-button {
+    display: none;
   }
 
-  .login-left,
-  .login-right {
+.login-right {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.room-image,
+.login-right .slick-slider {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .login-wrapper {
+    flex-direction: column;
+    height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .login-left {
     width: 100%;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
   }
 
   .login-content {
-    text-align: center;
-    align-items: center;
-    margin-top: 2rem;
+    text-align: left;
+    padding-left: 30px;
   }
 
   .logo {
-    margin: 0 auto 2rem;
+    margin: 0 0 30px 0;
+  }
+
+  .login-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: calc(100dvh - 100px);
+    }
+
+  .login-right .slick-slider,
+  .login-right .room-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
     display: block;
+  }
+
+  .mobile-login-button {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    font-size: 20px;
+    background: #fff;
+    color: #2E4F23;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .pc-login-button {
+    display: none;
+  }
+
+  .login-button:hover,
+  .mobile-login-button:hover {
+    background: #2E4F23;
+    color: white;
+    border: none;
   }
 }

@@ -1,27 +1,21 @@
 import React from 'react';
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
-import { useNavigate } from "react-router-dom";
 import './Logout.css';
 
-const Logout = ({ setIsAuth }) => {
-  const navigate = useNavigate();
+const Logout = ({ setIsAuth, onClose }) => {
 
   const handleLogout = () => {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      navigate("/login");
+      onClose();
     });
-  };
-
-  const handleCancel = () => {
-    navigate(-1); 
   };
 
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains("modal-overlay")) {
-      handleCancel();
+      onClose();
     }
   };
 

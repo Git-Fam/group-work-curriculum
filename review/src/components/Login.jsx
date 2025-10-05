@@ -44,12 +44,16 @@ const Login = ({ setIsAuth }) => {
           <p className="small-text">あなたの旅を、記録しよう</p>
           <p className="mid-text">
             だれかの宿泊体験が、<br />
-            次の旅人へつながる―――
+            次の旅人へつながる⏤⏤⏤
           </p>
           <img src={logoImg} alt="泊まレコ" className="logo" />
-          <button className="login-button" onClick={loginGoogle}>
-            Googleでログイン
-          </button>
+  </div>
+
+  <div className="pc-login-button">
+    <button className="login-button" onClick={loginGoogle}>
+      Googleでログイン
+    </button>
+
         </div>
       </div>
       <div className="login-right">
@@ -58,7 +62,12 @@ const Login = ({ setIsAuth }) => {
           <div><img src={slide2} alt="Slide 2" className="room-image" /></div>
           <div><img src={slide3} alt="Slide 3" className="room-image" /></div>
         </Slider>
+    <button className="login-button mobile-login-button" onClick={loginGoogle}>
+      Googleでログイン
+    </button>
       </div>
+
+
     </div>
   );
 };

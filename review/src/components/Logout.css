@@ -9,6 +9,9 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .modal-content {
@@ -16,7 +19,10 @@
   padding: 60px;
   border-radius: 10px;
   text-align: center;
-  width: 300px;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  color: #2E4F23;
 }
 
 .modal-button {
@@ -37,4 +43,28 @@
 .modal-button button:hover {
   opacity: 0.8;
   background-color: #f0f0f0;
+}
+
+@media (max-width: 800px) {
+  .modal-overlay {
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 40px 30px; 
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    color: #2E4F23;
+    margin: 0 auto; 
+  }
 }

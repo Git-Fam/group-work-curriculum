@@ -1,0 +1,215 @@
+.post-container {
+  width: 90%;
+  margin: 20px auto;
+  background: #fdf8ef;
+  padding: 30px;
+  border-radius: 8px;
+  border: 2px solid #2f5d2f;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.post-form h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #2f5d2f;
+  border-bottom: 2px solid #2f5d2f;
+  padding-bottom: 5px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #2f5d2f;
+}
+
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+
+.tags label,
+.repeat label {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 30px;
+  background-color: #2f5d2f;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #264b26;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+}
+
+.tag-text {
+  color: #2f5d2f;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.tag-check {
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.repeat {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.repeat-text {
+  color: #2f5d2f;
+}
+
+
+.repeat {
+  display: flex;
+  align-items: flex-start; 
+  gap: 16px;             
+  margin-top: 10px;
+}
+
+.tags,
+.repeat,
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.tag-text,
+.repeat-text,
+.point-text {
+  min-width: 160px;
+  font-weight: 600;
+  color: #2f5d2f;
+  margin-right: 20px;
+}
+
+.tag-check,
+.repeat-check,
+.point-check {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+}
+
+
+.point {
+  display: flex;
+  align-items: center;
+}
+
+.file-upload-label {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #777;  
+  color: #fff;             
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.file-input {
+  display: none; 
+}
+
+.file-hint {
+  margin-left: 12px;
+  font-size: 14px;
+  color: #777; 
+  font-weight: 500;
+}
+
+.input-with-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-with-button input[type="text"] {
+  flex: 1;
+}
+
+.geo-btn {
+  appearance: none;
+  border: 1px solid #2f5d2f;
+  background: #2f5d2f;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  width: 130px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+
+.geo-btn:active { transform: translateY(1px); }
+.geo-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+  .post-container {
+    margin-top: 80px;
+  }
+
+    .post-container { margin-top: 80px; }
+  .input-with-button { gap: 6px; }
+  .geo-btn { padding: 8px 10px; font-size: 12px; }
+
+  .tags, .repeat, .point{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: flex-start
+  }
+
+  .point-text{
+    font-size: 14px;
+  }
+}
+

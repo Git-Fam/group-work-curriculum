@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  background: #f7f7f7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-layout {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.main-area {
+  flex: 1;
+  padding: 0;
+  overflow-y: auto;
+  margin-left: 250px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.app-layout.login-page-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.app-layout.login-page-layout .sidebar-area {
+  display: none; 
+}
+
+.app-layout.login-page-layout .main-area {
+  margin-left: 0; 
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .main-area {
+    margin-left: 0;
   }
 }
