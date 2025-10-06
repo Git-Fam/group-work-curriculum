@@ -20,6 +20,8 @@ const Animation = () => {
       const moji = ["あ", "い", "う", "え", "お", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
       const mojiRamdomNum = Math.floor(Math.random() * 10);
 
+      const fallTime = Math.random() * (0.35 - 0.15 ) + 0.15;
+
       const p = document.createElement("p");
       el.appendChild(p);
 
@@ -39,9 +41,9 @@ const Animation = () => {
       
 
       const playing = elChild.animate([
-        {transform: `rotateY(0deg) translateY(50%)`, opacity: "0", opacity: "0", offset: "0"},
-        {transform: `rotateY(360deg) translateY(${heightRandom}vh)`, opacity: "1", offset: "0.2"},
-        {transform: `rotateY(0deg) translateY(50%)`, opacity: "0", offset: "1.0"},
+        {transform: `rotateY(0deg) translateY(30%)`, opacity: "0", opacity: "0", offset: "0"},
+        {transform: `rotateY(360deg) translateY(${heightRandom}vh)`, opacity: "1", offset: `${fallTime}`},
+        {transform: `rotateY(0deg) translateY(30%)`, opacity: "0", offset: "1.0"},
       ],{
         duration: 12000,
   })
