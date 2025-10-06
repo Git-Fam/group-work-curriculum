@@ -12,12 +12,12 @@ const Animation = () => {
   useEffect(() => {
     const el = document.querySelector("#animation");
 
-    
+    let n = 0;
     
 
-    for(let i = 0; i < 11; i++){
-      let n = 0;
-      const moji = ["あ", "い", "う", "え", "お", "A", "B", "C", "D", "E", "F", "G"];
+    for(let i = 0; i < 18; i++){
+      
+      const moji = ["あ", "い", "う", "え", "お", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
       const mojiRamdomNum = Math.floor(Math.random() * 10);
 
       const p = document.createElement("p");
@@ -27,30 +27,33 @@ const Animation = () => {
 
       const elChild = el.children[n]      
 
-      const marginSide = Math.random() * (0 - 100) + 100;
+      const marginSide = Math.random() * (-50 - 100) + 100;
       elChild.style.position = "relative";
       elChild.style.left = marginSide + "vw";
 
 
       
 
-      const heightRandom = Math.random() * (-50 - -15) + -15;
+      const heightRandom = Math.random() * (-100 - 200) + -10;
       
       
 
       const playing = elChild.animate([
-        {transform: `rotateY(0deg) translateY(100vh)`, buttom: "0vh", opacity: "0", offset: "0"},
-        {transform: `rotateY(360deg) translateY(${heightRandom}vh)`, buttom: "120vh", opacity: "1", offset: "0.2"},
-        {transform: `rotateY(0deg) translateY(100vh)`, buttom: "0vh", opacity: "0", offset: "1.0"},
+        {transform: `rotateY(0deg) translateY(50%)`, opacity: "0", opacity: "0", offset: "0"},
+        {transform: `rotateY(360deg) translateY(${heightRandom}vh)`, opacity: "1", offset: "0.2"},
+        {transform: `rotateY(0deg) translateY(50%)`, opacity: "0", offset: "1.0"},
       ],{
-        duration: 10000,
-      
+        duration: 12000,
   })
   n++;
+        playing.onfinish = () =>{
+        el.remove();
+  }
     }
 
-    
   }, []);
+
+
 
   
     

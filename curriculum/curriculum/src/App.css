@@ -13,6 +13,8 @@
   background-repeat: no-repeat;
   background-position: bottom 50% left;
   font-family: "Noto Sans JP";
+  position: relative;
+  overflow: hidden;
 }
 .baseColor{
   backdrop-filter: blur(10px);

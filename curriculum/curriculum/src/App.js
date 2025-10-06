@@ -16,7 +16,7 @@ import TypingStart from './components/TypingStart';
 import TypingCount from './components/TypingCount';
 import TypingQuest from "./components/TypingQuest";
 import Results from './components/Results';
-import Animation from "./components/Animation"
+import Animation from "./components/Animation";
 
 function App() {
   return (
