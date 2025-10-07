@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
 import Score from './Score';
+import Animation from "./Animation";
 
 
 const MyPage = () => {
@@ -18,6 +19,7 @@ const MyPage = () => {
     <div className='body'>
       <div className='baseColor'>
         <Navbar />
+        <Animation/>
         <div className='mypageBody'>
           <div className='baseBG onUserBG'>
             <h2>MyPage</h2>

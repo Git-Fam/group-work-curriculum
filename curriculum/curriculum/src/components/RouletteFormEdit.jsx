@@ -3,6 +3,7 @@ import "./css/RouletteForm.css";
 import Navbar from "./Navbar";
 import Quest from './Quest';
 import { useNavigate } from 'react-router-dom';
+import Animation from "./Animation";
 
 const RouletteFormEdit = () => {
 
@@ -24,6 +25,7 @@ const RouletteFormEdit = () => {
         <div className='body'>
             <div className='baseColor'>
                 <Navbar />
+                <Animation/>
                 <div className='RouletteFormBody'>
                     <div className='baseBG onUserBG'>
                         <h2>Roulette-Form</h2>

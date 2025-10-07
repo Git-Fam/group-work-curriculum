@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./css/Logout.css";
 import {Link} from "react-router-dom";
+import Animation from "./Animation";
 
 const NewUserCreate = () => {
 
@@ -20,6 +21,7 @@ const NewUserCreate = () => {
             <Link to={"/login"}>Login</Link> 
           </button>
         </nav>
+        <Animation/>
 
         <div className='baseBody'>
           <div className='baseBG offUserBG'>

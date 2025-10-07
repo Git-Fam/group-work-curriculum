@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import "./css/TypingQuest.css";
 import { useNavigate } from 'react-router-dom';
 import {useEffect} from 'react';
+import Animation from "./Animation";
 
 
 const PyingQuest = () => {
@@ -24,6 +25,7 @@ const PyingQuest = () => {
     <div className='body'>
       <div className='baseColor'>
         <Navbar />
+        <Animation/>
         <div className='baseBody typingQuest'>
             <div className='typingArea'>
                 <div className='questionNumber'>〇〇〇〇〇〇〇〇〇〇〇〇〇〇</div>

@@ -1,13 +1,23 @@
 import React from 'react';
 import Navbar from "./Navbar";
 import "./css/Results.css";
+import {useNavigate } from 'react-router-dom';
+import Animation from "./Animation";
 
 
 const Results = () => {
+
+    const navigate = useNavigate();
+
+    const backMypage = () => {
+        navigate("/mypage");
+  };
+
   return (
     <div className='body'>
       <div className='baseColor'>
         <Navbar />
+        <Animation/>
         <div className='baseBody resultsBody'>
             <div className='typingArea'>
 
@@ -22,7 +32,7 @@ const Results = () => {
                     <div className='border'></div>
                     <div className='border'></div>
                 </div>
-                <button className='mainFont endButton'>END</button>
+                <button onClick={backMypage} className='mainFont endButton'>END</button>
             </div>          
         </div>
       </div>

@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import "./css/RouletteList.css";
 import Navbar from "./Navbar";
 import RouletteListItem from './RouletteListItem';
+import Animation from "./Animation";
 
 
 const RouletteList = () => {
@@ -11,6 +12,7 @@ const RouletteList = () => {
     <div className='body'>
       <div className='baseColor'>
         <Navbar />
+        <Animation/>
         <div className='rouletteListBody'>
           <div className='baseBG onUserBG'>
             <h2>Roulette</h2>

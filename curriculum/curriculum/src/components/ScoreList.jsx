@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import {useEffect} from 'react';
 import "./css/ScoreList.css";
 import Score from './Score';
+import Animation from "./Animation";
 
 const ScoreList = () => {
 
@@ -25,6 +26,7 @@ const ScoreList = () => {
     <div className='body'>
       <div className='baseColor'>
         <Navbar />
+        <Animation/>
         <div className='scoreBody'>
           <div className='baseBG onUserBG'>
             <h2>Score</h2>

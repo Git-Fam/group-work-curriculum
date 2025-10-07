@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import "./css/TypingCount.css";
 import {useState} from "react";
 import { useNavigate } from 'react-router-dom';
+import Animation from "./Animation";
 
 const Typing = () => {
 
@@ -25,6 +26,7 @@ const Typing = () => {
     <div className='body'>
       <div className='baseColor'>
         <Navbar />
+        <Animation/>
         <div className='baseBody typingCount'>
           <div className='typingArea'>
             <div className='questionNumber'>〇〇〇〇〇〇〇〇〇〇〇〇〇〇</div>

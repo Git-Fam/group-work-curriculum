@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {Link, useNavigate } from 'react-router-dom';
 import "./css/Logout.css";
+import Animation from "./Animation";
 
 
 const Login = () => {
@@ -24,6 +25,7 @@ const Login = () => {
             <Link to={"/newusercreate"}>Singup</Link>
           </button>
         </nav>
+        <Animation/>
 
         <div className='baseBody'>
           <div className='baseBG offUserBG'>

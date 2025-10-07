@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from "./Navbar";
 import "./css/RouletteChoise.css";
 import { useNavigate } from 'react-router-dom';
+import Animation from "./Animation";
 
 
 const RouletteChoise = () => {
@@ -30,6 +31,7 @@ const RouletteChoise = () => {
     <div className='body'>
       <div className='baseColor'>
         <Navbar />
+        <Animation/>
         <div className='baseBody'>
             <div className='choiseButton'>
                 <div className='selectTitle'>

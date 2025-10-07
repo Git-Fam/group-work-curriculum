@@ -2,12 +2,14 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
 import "./css/SelectRoulette.css";
+import Animation from "./Animation";
  
 const SelectRoulette = () => {
   return (
     <div className='body'>
       <div className='baseColor'>
         <Navbar />
+        <Animation/>
         <div className='baseBody'>
             <div className='selectButton'>
                 <button>
