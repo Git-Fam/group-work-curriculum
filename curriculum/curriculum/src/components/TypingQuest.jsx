@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from "./Navbar";
 import "./css/TypingQuest.css";
 import { useNavigate } from 'react-router-dom';
-import {useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import Animation from "./Animation";
 
 
@@ -20,6 +20,22 @@ const PyingQuest = () => {
     })
   })
 
+
+  const [data, setData] = useState(undefined);
+
+  useEffect(() => {
+    fetch("http://api.quotable.io/random")
+    .then((res) => res.json())
+    .then((json) => setData(json))
+    .catch(() => alert("error"));
+    const questNum = Math.floor(Math.random() * 7);
+    setData(data[questNum].content);
+  }, []);
+
+
+  console.log(data);
+
+  
   
   return (
     <div className='body'>
@@ -29,7 +45,7 @@ const PyingQuest = () => {
         <div className='baseBody typingQuest'>
             <div className='typingArea'>
                 <div className='questionNumber'>〇〇〇〇〇〇〇〇〇〇〇〇〇〇</div>
-                <div className='questText'>あかさたなはまやらわ</div>
+                {data === undefined ? "" : <div className='questText'>{data}</div>}
                 <input id='typingInput' type='text'></input>
             </div>          
         </div>
