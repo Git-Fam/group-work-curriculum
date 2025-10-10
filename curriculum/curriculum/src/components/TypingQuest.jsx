@@ -28,13 +28,9 @@ const PyingQuest = () => {
     .then((res) => res.json())
     .then((json) => setData(json))
     .catch(() => alert("error"));
-    const questNum = Math.floor(Math.random() * 7);
-    setData(data[questNum].content);
   }, []);
 
-
-  console.log(data);
-
+console.log(data);
   
   
   return (
@@ -45,7 +41,7 @@ const PyingQuest = () => {
         <div className='baseBody typingQuest'>
             <div className='typingArea'>
                 <div className='questionNumber'>〇〇〇〇〇〇〇〇〇〇〇〇〇〇</div>
-                {data === undefined ? "" : <div className='questText'>{data}</div>}
+                {data === undefined ? "" : <div className='questText'>{data[0].content}</div>}
                 <input id='typingInput' type='text'></input>
             </div>          
         </div>
