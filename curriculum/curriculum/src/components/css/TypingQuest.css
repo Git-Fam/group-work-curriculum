@@ -6,7 +6,7 @@
 /* 問題部分 */
 .questText{
     background-color: #1DD800;
-    height: 225px;
+    min-height: 225px;
     display: flex;
     align-items: center;
     justify-content: center;

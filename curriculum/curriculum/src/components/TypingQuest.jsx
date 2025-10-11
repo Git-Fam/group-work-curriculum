@@ -41,7 +41,7 @@ console.log(data);
         <div className='baseBody typingQuest'>
             <div className='typingArea'>
                 <div className='questionNumber'>〇〇〇〇〇〇〇〇〇〇〇〇〇〇</div>
-                {data === undefined ? "" : <div className='questText'>{data[0].content}</div>}
+                {data === undefined ? "" : <div className='questText'>{data.content}</div>}
                 <input id='typingInput' type='text'></input>
             </div>          
         </div>
