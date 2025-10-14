@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import "./css/RouletteChoise.css";
 import { useNavigate } from 'react-router-dom';
 import Animation from "./Animation";
+import { useState, useEffect } from "react";
 
 
 const RouletteChoise = () => {
@@ -10,8 +11,20 @@ const RouletteChoise = () => {
   const navigate = useNavigate();
   let buttonIvent = 1;
 
+  const [index, setIndex] = useState(0);
+
+  const rouletteContents = [
+    "タイトルタイトルタイトル",
+    "あいうえおあいうえおあい",
+    "ABCABCABCABCABCABCABC"
+  ];
+
+  // ボタンの文字変更
+
   const buttonIventNumber = () =>{
-    
+
+
+
     const buttonChoiseText = document.getElementById('rouletteStartButton')
     buttonIvent ++;
     if (buttonIvent === 1) {
@@ -20,12 +33,24 @@ const RouletteChoise = () => {
       buttonChoiseText.innerHTML = 'Stop';
     }else if (buttonIvent === 3) {
       buttonChoiseText.innerHTML = 'select';
-      
     }else if (buttonIvent === 4){
       navigate("/typingstart")
     }    
   } 
 
+  useEffect(() => {
+    if (buttonIvent === 2) {
+      const interval = setInterval(() => {
+        setIndex((oldIndex) => {
+          if (oldIndex < rouletteContents.length - 1) return oldIndex + 1;
+          return 0;
+        });
+      }, 50);//ルーレットの中身を切り替える速度
+      return () => clearInterval(interval);
+    } else if (buttonIvent === 3) {
+      return () => clearInterval();
+    }
+  }, []);
 
   return (
     <div className='body'>
@@ -37,7 +62,7 @@ const RouletteChoise = () => {
                 <div className='selectTitle'>
                     <div className='choise'>&#9654;</div>
                     <button className='titleChoise'>
-                        <div>タイトルタイトルタイトル</div>
+                        <div>{rouletteContents[index]}</div>
                     </button>
                     <div className='choise'>&#9664;</div>
                 </div>

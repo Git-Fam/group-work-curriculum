@@ -33,6 +33,9 @@ const Animation = () => {
       elChild.style.position = "relative";
       elChild.style.left = marginSide + "vw";
 
+      const mojiSize = Math.random() * (20 - 120) + 120;
+      elChild.style.fontSize = mojiSize + "px";
+
 
       
 
