@@ -19,11 +19,15 @@ const RouletteChoise = () => {
     "ABCABCABCABCABCABCABC"
   ];
 
+  const interval = function(){
+    setIndex((oldIndex) => {
+      if (oldIndex < rouletteContents.length - 1) return oldIndex + 1;
+      return 0;
+    })};
+
   // ボタンの文字変更
 
   const buttonIventNumber = () =>{
-
-
 
     const buttonChoiseText = document.getElementById('rouletteStartButton')
     buttonIvent ++;
@@ -31,26 +35,30 @@ const RouletteChoise = () => {
       buttonChoiseText.innerHTML = 'Start';
     }else if (buttonIvent === 2) {
       buttonChoiseText.innerHTML = 'Stop';
+      setInterval(interval, 100);
+      
     }else if (buttonIvent === 3) {
       buttonChoiseText.innerHTML = 'select';
+      clearInterval(interval);
+      
     }else if (buttonIvent === 4){
       navigate("/typingstart")
     }    
   } 
 
-  useEffect(() => {
-    if (buttonIvent === 2) {
-      const interval = setInterval(() => {
-        setIndex((oldIndex) => {
-          if (oldIndex < rouletteContents.length - 1) return oldIndex + 1;
-          return 0;
-        });
-      }, 50);//ルーレットの中身を切り替える速度
-      return () => clearInterval(interval);
-    } else if (buttonIvent === 3) {
-      return () => clearInterval();
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (buttonIvent === 2) {
+  //     const interval = setInterval(() => {
+  //       setIndex((oldIndex) => {
+  //         if (oldIndex < rouletteContents.length - 1) return oldIndex + 1;
+  //         return 0;
+  //       });
+  //     }, 50);//ルーレットの中身を切り替える速度
+  //     return () => clearInterval(interval);
+  //   } else if (buttonIvent === 3) {
+  //     return () => clearInterval();
+  //   }
+  // }, []);
 
   return (
     <div className='body'>
