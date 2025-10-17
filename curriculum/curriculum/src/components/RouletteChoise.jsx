@@ -22,7 +22,10 @@ const RouletteChoise = () => {
 
   const handleClick = () => {
     setButtonIvent(buttonIvent + 1);
-    if(buttonIvent === 2){
+  }
+
+  useEffect(() =>{
+  if(buttonIvent === 2){
       setButtonText("stop");
       const interval = setInterval(() => {
         setIndex((oldIndex) => {
@@ -36,7 +39,8 @@ const RouletteChoise = () => {
     }else if(buttonText === 4){
       navigate("/typingstart");
     }
-  }
+  }, [buttonIvent])
+
 
 
   // const interval = function(){
