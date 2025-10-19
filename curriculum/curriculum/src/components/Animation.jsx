@@ -3,7 +3,6 @@ import "./css/animation.css";
 import {useEffect} from 'react';
 import {useAnimation} from "react-animatable";
 
-// Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
 const Animation = () => {
 

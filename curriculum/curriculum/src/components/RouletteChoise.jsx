@@ -34,51 +34,13 @@ const RouletteChoise = () => {
         });
       }, 50);
       return () => clearInterval(interval);
-    }else if(buttonText === 3){
+    }else if(buttonIvent === 3){
       setButtonText("select");
-    }else if(buttonText === 4){
+    }else if(buttonIvent === 4){
       navigate("/typingstart");
     }
   }, [buttonIvent])
 
-
-
-  // const interval = function(){
-  //   setIndex((oldIndex) => {
-  //     if (oldIndex < rouletteContents.length - 1) return oldIndex + 1;
-  //     return 0;
-  //   })};
-
-  // ボタンの文字変更
-
-  // const buttonIventNumber = () =>{
-    
-  //   if (buttonIvent === 2) {
-  //     seButtonText("stop");
-  //     buttonIvent ++;
-  //   }else if (buttonIvent === 3) {
-  //     seButtonText("select");
-  //     buttonIvent ++;
-  //   }else if (buttonIvent === 4){
-  //     navigate("/typingstart")
-  //   }    
-  // } 
-
-  console.log(buttonIvent);
-
-  // useEffect(() => {
-  //   if (buttonIvent === 2) {
-  //     const interval = setInterval(() => {
-  //       setIndex((oldIndex) => {
-  //         if (oldIndex < rouletteContents.length - 1) return oldIndex + 1;
-  //         return 0;
-  //       });
-  //     }, 50);//ルーレットの中身を切り替える速度
-  //     return () => clearInterval(interval);
-  //   } else if (buttonIvent === 3) {
-  //     return () => clearInterval();
-  //   }
-  // }, []);
 
   return (
     <div className='body'>
