@@ -1,7 +1,8 @@
 import "./Post.css";
 import React, { useState } from "react";
-import { getFirestore, addDoc, collection } from "firebase/firestore";
+import { getFirestore, addDoc, collection, getDocs } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {auth, db} from "../../firebase";
 
 
 
@@ -13,10 +14,14 @@ const Post = () => {
     const auth = getAuth();
 
     const createPost = async() =>{
+        const data = await getDocs(collection(db, "user"));
         await addDoc(collection(db, "posts"),{
             title: title,
             text: text,
-        },)
+
+        
+        });
+        alert("送信しました！");
     }
 
   return (
