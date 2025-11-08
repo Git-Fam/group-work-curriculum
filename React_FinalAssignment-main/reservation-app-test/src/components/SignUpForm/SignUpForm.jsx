@@ -27,7 +27,7 @@ const SignUpForm = ({ onClose }) => {
       );
       const user = userCredential.user;
 
-      await addDoc(collection(db, "user"), {
+      await addDoc(collection(db, "users"), {
         uid: user.uid,
         name,
         gender,
@@ -55,7 +55,6 @@ const SignUpForm = ({ onClose }) => {
       alert(errorMessage); // ユーザーにエラーメッセージを表示
     }
   };
-
 
   return (
     <div className="modal-overlay">

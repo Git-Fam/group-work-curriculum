@@ -29,8 +29,7 @@ const Navbar = ({ isAuth }) => {
             マイページ
           </Link>
           <Link to="/post">
-            <FontAwesomeIcon/>
-            問い合わせ
+            お問い合わせ
           </Link>
           <Link to="/management">
             <FontAwesomeIcon icon={faListCheck} />

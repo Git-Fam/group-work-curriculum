@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
+import "./Management.css";
 import Report from "./Report";
 import ReservationList from "./ReservationList"; 
-import "./Management.css";
+import PostList from "./PostList";
 
 const Management = () => {
   const [users, setUsers] = useState([]);
@@ -88,9 +89,9 @@ const Management = () => {
         <Link to="reservation-list" className="management-nav-button">
           予約一覧
         </Link>
-        <div className="management-nav-button">
-          お問い合わせ一覧
-        </div>
+        <Link to="post-list" className="management-nav-button">
+          お問い合わせ
+        </Link>
       </nav>
 
       {/* 検索バー */}
@@ -122,6 +123,7 @@ const Management = () => {
             </div>
           }
         />
+        <Route path="post-list" element={<PostList />} />
         <Route path="report" element={<Report />} />
         <Route path="reservation-list" element={<ReservationList />} />
         <Route path="/" element={<Navigate to="user-list" />} />

@@ -14,12 +14,12 @@ const Post = () => {
     const auth = getAuth();
 
     const createPost = async() =>{
-        const data = await getDocs(collection(db, "user"));
         await addDoc(collection(db, "posts"),{
             title: title,
             text: text,
-
-        
+            
+            userId: auth.currentUser.uid,
+            
         });
         alert("送信しました！");
     }

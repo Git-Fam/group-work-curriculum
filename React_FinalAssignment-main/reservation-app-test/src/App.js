@@ -60,6 +60,7 @@ function App() {
             >
               <Route index element={<Client isAuth={isAuth} />} />
               <Route path="report" element={<Report isAuth={isAuth} />} />
+              
             </Route>
           </Route>
         </Routes>
