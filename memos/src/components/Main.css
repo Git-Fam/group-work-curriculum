@@ -1,0 +1,56 @@
+.app-main {
+    width: 70%;
+    height: 100vh;
+
+}
+
+.app-main-memo-edit,
+.app-main-memo-preview {
+    height: 50vh;
+}
+
+.app-main-memo-edit {
+   padding: 30px;
+}
+
+.app-main-memo-edit input,
+textarea {
+display: block;
+border: 1px solid #ddd;
+margin-bottom: 20px;
+width: 100%;
+height: calc(50vh - 130px);
+padding: 5px;
+resize: none;
+font-size: 16px;
+}
+
+.app-main-memo-edit input {
+height: 50px;
+font-size: 2rem;
+}
+
+.app-main-memo-preview {
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.preview-title {
+    padding: 25px 25px 0 25px;
+    margin: 0;
+}
+
+.markdown-preview {
+    padding: 0 25px 25px 25px;
+        line-height: 2rem;
+}
+
+.no-active-memo {
+    width: 70%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center; 
+    font-size: 2rem;
+    color: #bcbcbc;
+}

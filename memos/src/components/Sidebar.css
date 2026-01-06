@@ -1,0 +1,83 @@
+button {
+background: none;
+border: none;
+color: cadetblue;
+margin: 0;
+padding: 0;
+font-size: 16px;
+cursor: pointer;
+}
+
+.no-memos {
+    text-align: center; 
+    color: #bcbcbc;
+}
+
+
+.app-sidebar {
+    width: 30%;
+    height: 100vh;
+    border-right: 5px dotted #ddd;
+
+}
+
+
+.app-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.app-sidebar-header {
+    margin: 0;
+}
+
+.app-sidebar-header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* align-items: center; */
+}
+
+.app-sidebar-header-button {
+    align-self: flex-end;
+}
+
+.app-sidebar-memos {
+    height: calc(100vh - 78px);
+    overflow-y: scroll;
+}
+
+.app-sidebar-memo {
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sidebar-memo-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-sidebar-memo p {
+    margin:  10px 0;
+}
+
+.app-sidebar-memo small {
+    color: #999
+}
+
+.app-sidebar-memo:hover {
+    background-color: #c7e3e2;
+}
+
+
+.app-sidebar-memo.active {
+    background-color: #c7e3e2;
+}
+
+
+
+.app-sidebar-header input {
+    height: 30px;
+}

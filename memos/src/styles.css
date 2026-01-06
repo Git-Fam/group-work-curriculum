@@ -1,0 +1,93 @@
+html,
+body {
+  padding-top: 60px;
+  background-color: #f7f7f7;
+}
+
+/* 全体のボックス */
+.box {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #faf8f3;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 見出し (大吉や結果の表示) */
+h1 {
+  font-size: 36px;
+  color: #d85c5c;
+  margin-bottom: 20px;
+  font-family: "Sawarabi Mincho", serif;
+}
+
+/* 結果の大きな表示 */
+h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #d9534f;
+  animation: fadeIn 1s ease-out;
+  margin-bottom: 60px;
+  font-family: "Sawarabi Mincho", serif;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ボタン */
+button {
+  background-color: rgb(6 60 25 / 50%);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* ボタンホバー効果 */
+button:hover {
+  background-color: rgb(6 60 25 / 73%);
+  transform: translateY(5px);
+}
+
+/* 過去の結果リスト */
+h3 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #333;
+  font-family: "Sawarabi Mincho", serif;
+}
+
+/* 過去の結果を囲むスタイル */
+ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0;
+  padding: 15px;
+}
+
+/* 各リストアイテム */
+li {
+  font-size: 18px;
+  color: #444;
+  margin: 5px 0;
+}
